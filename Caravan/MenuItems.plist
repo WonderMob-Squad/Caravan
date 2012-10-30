@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Items</key>
+	<dict>
+		<key>Item1</key>
+		<string>Start Caravan!</string>
+		<key>Item2</key>
+		<string>Lead a Caravan</string>
+		<key>Item3</key>
+		<string>Join a Caravan</string>
+		<key>Item4</key>
+		<string>Edit Your Profile</string>
+	</dict>
+</dict>
+</plist>
