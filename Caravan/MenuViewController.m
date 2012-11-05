@@ -34,7 +34,7 @@ NSString *menuItemValues = nil;
     [super viewDidLoad];
     menuItemPath = [[NSBundle mainBundle] pathForResource:@"MenuItems" ofType:@"plist"];
     NSLog(@"%@", menuItemPath);
-    menuItemValues = [NSDictionary dictionaryWithContentsOfFile:menuItemPath];
+    _menuArray = [[NSDictionary dictionaryWithContentsOfFile:menuItemPath] valueForKey:@"Items"];
     NSLog(@"%@", menuItemValues);
 
     // Uncomment the following line to preserve selection between presentations.
@@ -43,9 +43,9 @@ NSString *menuItemValues = nil;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.menuArray = [[NSArray alloc] init];
-    self.menuItems = [[NSDictionary alloc] initWithDictionary: [menuItemValues valueForKey:@"Items"]];
-    self.menuArray = [self.menuItems allValues];
+    //self.menuArray = [[NSArray alloc] init];
+    //self.menuItems = [[NSDictionary alloc] initWithDictionary: [menuItemValues valueForKey:@"Items"]];
+    //self.menuArray = [self.menuItems allValues];
     
 }
 
@@ -65,7 +65,7 @@ NSString *menuItemValues = nil;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Update this section if number of menu items is changed.
-    return 4;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -124,13 +124,51 @@ NSString *menuItemValues = nil;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Indicates which of the specific menu items was tapped
+    switch ([indexPath row]) {
+        case 0:
+            //statements
+            [self performSegueWithIdentifier:@"id" sender:self];
+            break;
+        case 1:
+            [self performSegueWithIdentifier:@"id" sender:self];
+            break;
+        case 2:
+            [self performSegueWithIdentifier:@"id" sender:self];
+            break;
+        case 3:
+            [self performSegueWithIdentifier:@"id" sender:self];
+            break;
+        case 4:
+            [self performSegueWithIdentifier:@"id" sender:self];
+            break;
+        case 5:
+            [self performSegueWithIdentifier:@"id" sender:self];
+            break;
+    }
+    
     // Navigation logic may go here. Create and push another view controller.
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     //<#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+/*
+ The control methods for the UIAlertView written in case 5 above appear here. 
+ */
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        //cancel clicked
+    }
+    else if (buttonIndex == 1)
+    {
+        //ok clicked
+    }
 }
 
 @end

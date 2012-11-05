@@ -3,15 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Items</key>
-	<dict>
-		<key>Item1</key>
+	<array>
 		<string>Start Caravan!</string>
-		<key>Item2</key>
 		<string>Lead a Caravan</string>
-		<key>Item3</key>
 		<string>Join a Caravan</string>
-		<key>Item4</key>
 		<string>Edit Your Profile</string>
-	</dict>
+		<string>Manage Current Caravan</string>
+		<string>Abandon Caravan</string>
+	</array>
 </dict>
 </plist>
