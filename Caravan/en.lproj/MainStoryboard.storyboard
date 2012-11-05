@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="2298" y="1089"/>
         </scene>
-        <!--View Controller - Host-->
+        <!--Host View Controller - Host-->
         <scene sceneID="mJL-ni-xXb">
             <objects>
-                <viewController title="Host" id="nbj-W4-Pix" sceneMemberID="viewController">
+                <viewController title="Host" id="nbj-W4-Pix" customClass="HostViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HnO-xZ-1el">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="267" y="1447"/>
         </scene>
-        <!--View Controller - Join-->
+        <!--Join View Controller - Join-->
         <scene sceneID="KWv-VN-5Xc">
             <objects>
-                <viewController title="Join" id="P8g-VM-hXM" sceneMemberID="viewController">
+                <viewController title="Join" id="P8g-VM-hXM" customClass="JoinViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U1p-lf-Yo6">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="727" y="1447"/>
         </scene>
-        <!--View Controller-->
+        <!--Current View Controller - Current-->
         <scene sceneID="TEg-yR-fAk">
             <objects>
-                <viewController id="97R-my-L8b" sceneMemberID="viewController">
+                <viewController title="Current" id="97R-my-L8b" customClass="CurrentViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HDi-xO-F2r">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,7 +146,7 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="zgc-dF-zsS" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="RGm-Zc-KYH"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="fBL-Mf-kAp">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -259,6 +259,15 @@
         </scene>
     </scenes>
     <classes>
+        <class className="CurrentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentViewController.h"/>
+        </class>
+        <class className="HostViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HostViewController.h"/>
+        </class>
+        <class className="JoinViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JoinViewController.h"/>
+        </class>
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
             <relationships>

@@ -30,6 +30,9 @@
 		CD01C6B4163F39260097F925 /* CaravanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01C6B3163F39260097F925 /* CaravanCell.m */; };
 		CD01C6B7163F39F40097F925 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD01C6B6163F39F40097F925 /* MenuItems.plist */; };
 		CDF959D116487F7E00585EBC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF959CE16487F7100585EBC /* MapKit.framework */; };
+		CDF959DE1648878B00585EBC /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959DD1648878B00585EBC /* HostViewController.m */; };
+		CDF959E2164887B000585EBC /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959E1164887B000585EBC /* JoinViewController.m */; };
+		CDF959E6164887E700585EBC /* CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959E5164887E700585EBC /* CurrentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,12 @@
 		CD01C6B3163F39260097F925 /* CaravanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaravanCell.m; sourceTree = "<group>"; };
 		CD01C6B6163F39F40097F925 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuItems.plist; sourceTree = "<group>"; };
 		CDF959CE16487F7100585EBC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CDF959DC1648878B00585EBC /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
+		CDF959DD1648878B00585EBC /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
+		CDF959E0164887B000585EBC /* JoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinViewController.h; sourceTree = "<group>"; };
+		CDF959E1164887B000585EBC /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinViewController.m; sourceTree = "<group>"; };
+		CDF959E4164887E700585EBC /* CurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentViewController.h; sourceTree = "<group>"; };
+		CDF959E5164887E700585EBC /* CurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +146,9 @@
 		CD01C65D163F17550097F925 /* Caravan */ = {
 			isa = PBXGroup;
 			children = (
+				CDF959E3164887CF00585EBC /* V6: Current Caravan */,
+				CDF959DF1648879E00585EBC /* V5: Join */,
+				CDF959DA1648877400585EBC /* V4: Host */,
 				CD01C6B5163F39C50097F925 /* Local Property Lists */,
 				CD01C6A4163F37ED0097F925 /* Settings.bundle */,
 				CD01C6A3163F36EF0097F925 /* V3: My Caravan */,
@@ -236,6 +248,33 @@
 				CD01C6B6163F39F40097F925 /* MenuItems.plist */,
 			);
 			name = "Local Property Lists";
+			sourceTree = "<group>";
+		};
+		CDF959DA1648877400585EBC /* V4: Host */ = {
+			isa = PBXGroup;
+			children = (
+				CDF959DC1648878B00585EBC /* HostViewController.h */,
+				CDF959DD1648878B00585EBC /* HostViewController.m */,
+			);
+			name = "V4: Host";
+			sourceTree = "<group>";
+		};
+		CDF959DF1648879E00585EBC /* V5: Join */ = {
+			isa = PBXGroup;
+			children = (
+				CDF959E0164887B000585EBC /* JoinViewController.h */,
+				CDF959E1164887B000585EBC /* JoinViewController.m */,
+			);
+			name = "V5: Join";
+			sourceTree = "<group>";
+		};
+		CDF959E3164887CF00585EBC /* V6: Current Caravan */ = {
+			isa = PBXGroup;
+			children = (
+				CDF959E4164887E700585EBC /* CurrentViewController.h */,
+				CDF959E5164887E700585EBC /* CurrentViewController.m */,
+			);
+			name = "V6: Current Caravan";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +396,9 @@
 				CD01C6AE163F38CF0097F925 /* CaravanViewController.m in Sources */,
 				CD01C6B1163F39170097F925 /* MenuCell.m in Sources */,
 				CD01C6B4163F39260097F925 /* CaravanCell.m in Sources */,
+				CDF959DE1648878B00585EBC /* HostViewController.m in Sources */,
+				CDF959E2164887B000585EBC /* JoinViewController.m in Sources */,
+				CDF959E6164887E700585EBC /* CurrentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
