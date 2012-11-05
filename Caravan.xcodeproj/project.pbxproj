@@ -29,6 +29,7 @@
 		CD01C6B1163F39170097F925 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01C6B0163F39170097F925 /* MenuCell.m */; };
 		CD01C6B4163F39260097F925 /* CaravanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD01C6B3163F39260097F925 /* CaravanCell.m */; };
 		CD01C6B7163F39F40097F925 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD01C6B6163F39F40097F925 /* MenuItems.plist */; };
+		CDF959D116487F7E00585EBC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF959CE16487F7100585EBC /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		CD01C6B2163F39260097F925 /* CaravanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaravanCell.h; sourceTree = "<group>"; };
 		CD01C6B3163F39260097F925 /* CaravanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaravanCell.m; sourceTree = "<group>"; };
 		CD01C6B6163F39F40097F925 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuItems.plist; sourceTree = "<group>"; };
+		CDF959CE16487F7100585EBC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF959D116487F7E00585EBC /* MapKit.framework in Frameworks */,
 				CD01C658163F17550097F925 /* UIKit.framework in Frameworks */,
 				CD01C65A163F17550097F925 /* Foundation.framework in Frameworks */,
 				CD01C65C163F17550097F925 /* CoreGraphics.framework in Frameworks */,
@@ -122,6 +125,7 @@
 		CD01C656163F17550097F925 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDF959CE16487F7100585EBC /* MapKit.framework */,
 				CD01C657163F17550097F925 /* UIKit.framework */,
 				CD01C659163F17550097F925 /* Foundation.framework */,
 				CD01C65B163F17550097F925 /* CoreGraphics.framework */,
@@ -529,6 +533,7 @@
 				CD01C694163F17560097F925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD01C695163F17560097F925 /* Build configuration list for PBXNativeTarget "CaravanTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +542,7 @@
 				CD01C697163F17560097F925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

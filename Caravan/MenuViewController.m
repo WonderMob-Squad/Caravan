@@ -126,25 +126,32 @@ NSString *menuItemValues = nil;
 {
     //Indicates which of the specific menu items was tapped
     switch ([indexPath row]) {
-        case 0:
+        case 0: //Start Caravan!
             //statements
-            [self performSegueWithIdentifier:@"id" sender:self];
+            [self performSegueWithIdentifier:@"mapSegue" sender:self];
             break;
-        case 1:
-            [self performSegueWithIdentifier:@"id" sender:self];
+        case 1: //Lead a Caravan
+            [self performSegueWithIdentifier:@"hostSegue" sender:self];
             break;
-        case 2:
-            [self performSegueWithIdentifier:@"id" sender:self];
+        case 2: //Join a Caravan
+            [self performSegueWithIdentifier:@"joinSegue" sender:self];
             break;
-        case 3:
-            [self performSegueWithIdentifier:@"id" sender:self];
+        case 3: //Edit Your Profile
+            [self performSegueWithIdentifier:@"profileSegue" sender:self];
             break;
-        case 4:
-            [self performSegueWithIdentifier:@"id" sender:self];
+        case 4: //View Caravan In Progress
+            [self performSegueWithIdentifier:@"currentSegue" sender:self];
             break;
-        case 5:
-            [self performSegueWithIdentifier:@"id" sender:self];
+        case 5: //Abandon Caravan
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Really Abandon?"
+                                                       message:@"If you abandon your caravan, you will be unable to exchange location information with your fellow travelers."
+                                                       delegate:self
+                                                       cancelButtonTitle:@"Cancel"
+                                                       otherButtonTitles:@"Yes", nil];
+            [alert show];
             break;
+        }
     }
     
     // Navigation logic may go here. Create and push another view controller.
@@ -163,12 +170,19 @@ NSString *menuItemValues = nil;
 {
     if (buttonIndex == 0)
     {
-        //cancel clicked
+        //cancel clicked...do nothing!
     }
     else if (buttonIndex == 1)
     {
         //ok clicked
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Caravan Abandoned!"
+                                                        message:@"Your location information is no longer being broadcast."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Return to Menu"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
+    
 }
 
 @end

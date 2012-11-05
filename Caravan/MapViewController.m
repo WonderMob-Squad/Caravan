@@ -13,6 +13,7 @@
 @end
 
 @implementation MapViewController
+@synthesize mapView = _mapView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
