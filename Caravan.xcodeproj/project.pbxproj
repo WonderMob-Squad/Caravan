@@ -34,6 +34,7 @@
 		CDF959E2164887B000585EBC /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959E1164887B000585EBC /* JoinViewController.m */; };
 		CDF959E6164887E700585EBC /* CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959E5164887E700585EBC /* CurrentViewController.m */; };
 		CDF959E91648887D00585EBC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF959E71648886500585EBC /* CoreLocation.framework */; };
+		CDF959EC164888BB00585EBC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF959EA164888AF00585EBC /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		CDF959E4164887E700585EBC /* CurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentViewController.h; sourceTree = "<group>"; };
 		CDF959E5164887E700585EBC /* CurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentViewController.m; sourceTree = "<group>"; };
 		CDF959E71648886500585EBC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CDF959EA164888AF00585EBC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF959EC164888BB00585EBC /* AddressBook.framework in Frameworks */,
 				CDF959E91648887D00585EBC /* CoreLocation.framework in Frameworks */,
 				CDF959D116487F7E00585EBC /* MapKit.framework in Frameworks */,
 				CD01C658163F17550097F925 /* UIKit.framework in Frameworks */,
@@ -137,6 +140,7 @@
 		CD01C656163F17550097F925 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDF959EA164888AF00585EBC /* AddressBook.framework */,
 				CDF959E71648886500585EBC /* CoreLocation.framework */,
 				CDF959CE16487F7100585EBC /* MapKit.framework */,
 				CD01C657163F17550097F925 /* UIKit.framework */,
