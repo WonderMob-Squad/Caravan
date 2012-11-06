@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="877" y="53"/>
         </scene>
-        <!--View Controller - Basic Info-->
+        <!--Basic Info View Controller - Basic Info-->
         <scene sceneID="LWU-rx-Grp">
             <objects>
-                <viewController title="Basic Info" id="1KO-Xh-Q9w" sceneMemberID="viewController">
+                <viewController title="Basic Info" id="1KO-Xh-Q9w" customClass="BasicInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="68T-WX-gIE">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="1766" y="1417"/>
         </scene>
-        <!--View Controller - Preferences-->
+        <!--Preferences View Controller - Preferences-->
         <scene sceneID="WOM-Yb-jUU">
             <objects>
-                <viewController id="TlM-qh-BGG" sceneMemberID="viewController">
+                <viewController id="TlM-qh-BGG" customClass="PreferencesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dQW-K3-tDh">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="2298" y="2535"/>
         </scene>
-        <!--Collection View Controller - Avatar Select-->
+        <!--Avatar Select View Controller - Avatar Select-->
         <scene sceneID="cBJ-0J-Kth">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="9OL-kq-QaM" sceneMemberID="viewController">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="9OL-kq-QaM" customClass="AvatarSelectViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="zTa-qS-E89">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,6 +297,12 @@
         </scene>
     </scenes>
     <classes>
+        <class className="AvatarSelectViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AvatarSelectViewController.h"/>
+        </class>
+        <class className="BasicInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicInfoViewController.h"/>
+        </class>
         <class className="CurrentViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentViewController.h"/>
         </class>
@@ -323,6 +329,9 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PreferencesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PreferencesViewController.h"/>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>

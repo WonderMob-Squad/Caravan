@@ -36,6 +36,9 @@
 		CDF959E91648887D00585EBC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF959E71648886500585EBC /* CoreLocation.framework */; };
 		CDF959EC164888BB00585EBC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF959EA164888AF00585EBC /* AddressBook.framework */; };
 		CDF959EF164888F100585EBC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF959ED164888DE00585EBC /* Accounts.framework */; };
+		CDF959F316488AEA00585EBC /* BasicInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959F216488AEA00585EBC /* BasicInfoViewController.m */; };
+		CDF959FA16488B4500585EBC /* AvatarSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959F916488B4500585EBC /* AvatarSelectViewController.m */; };
+		CDF959FE16488BA000585EBC /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959FD16488BA000585EBC /* PreferencesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,12 @@
 		CDF959E71648886500585EBC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CDF959EA164888AF00585EBC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		CDF959ED164888DE00585EBC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		CDF959F116488AEA00585EBC /* BasicInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfoViewController.h; sourceTree = "<group>"; };
+		CDF959F216488AEA00585EBC /* BasicInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInfoViewController.m; sourceTree = "<group>"; };
+		CDF959F816488B4500585EBC /* AvatarSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarSelectViewController.h; sourceTree = "<group>"; };
+		CDF959F916488B4500585EBC /* AvatarSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarSelectViewController.m; sourceTree = "<group>"; };
+		CDF959FC16488BA000585EBC /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
+		CDF959FD16488BA000585EBC /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +167,9 @@
 		CD01C65D163F17550097F925 /* Caravan */ = {
 			isa = PBXGroup;
 			children = (
+				CDF959FB16488B7900585EBC /* V9: Profile Preferences */,
+				CDF959F416488B0300585EBC /* V8: Avatar Select */,
+				CDF959F016488AB900585EBC /* V7: Basic Info */,
 				CDF959E3164887CF00585EBC /* V6: Current Caravan */,
 				CDF959DF1648879E00585EBC /* V5: Join */,
 				CDF959DA1648877400585EBC /* V4: Host */,
@@ -289,6 +301,33 @@
 			name = "V6: Current Caravan";
 			sourceTree = "<group>";
 		};
+		CDF959F016488AB900585EBC /* V7: Basic Info */ = {
+			isa = PBXGroup;
+			children = (
+				CDF959F116488AEA00585EBC /* BasicInfoViewController.h */,
+				CDF959F216488AEA00585EBC /* BasicInfoViewController.m */,
+			);
+			name = "V7: Basic Info";
+			sourceTree = "<group>";
+		};
+		CDF959F416488B0300585EBC /* V8: Avatar Select */ = {
+			isa = PBXGroup;
+			children = (
+				CDF959F816488B4500585EBC /* AvatarSelectViewController.h */,
+				CDF959F916488B4500585EBC /* AvatarSelectViewController.m */,
+			);
+			name = "V8: Avatar Select";
+			sourceTree = "<group>";
+		};
+		CDF959FB16488B7900585EBC /* V9: Profile Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				CDF959FC16488BA000585EBC /* PreferencesViewController.h */,
+				CDF959FD16488BA000585EBC /* PreferencesViewController.m */,
+			);
+			name = "V9: Profile Preferences";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +450,9 @@
 				CDF959DE1648878B00585EBC /* HostViewController.m in Sources */,
 				CDF959E2164887B000585EBC /* JoinViewController.m in Sources */,
 				CDF959E6164887E700585EBC /* CurrentViewController.m in Sources */,
+				CDF959F316488AEA00585EBC /* BasicInfoViewController.m in Sources */,
+				CDF959FA16488B4500585EBC /* AvatarSelectViewController.m in Sources */,
+				CDF959FE16488BA000585EBC /* PreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
