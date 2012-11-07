@@ -131,7 +131,7 @@
                             <constraint firstItem="aIi-SU-hBH" firstAttribute="top" secondItem="HnO-xZ-1el" secondAttribute="top" constant="212" id="V0Y-VJ-qvK"/>
                             <constraint firstItem="Sbu-SW-CzL" firstAttribute="centerX" secondItem="HnO-xZ-1el" secondAttribute="centerX" type="default" id="gUD-BE-5QG"/>
                             <constraint firstItem="aIi-SU-hBH" firstAttribute="centerX" secondItem="Sbu-SW-CzL" secondAttribute="centerX" type="default" id="iWg-BR-MNY"/>
-                            <constraint firstAttribute="bottom" secondItem="ZM6-nc-sKy" secondAttribute="bottom" constant="180" id="yji-J4-wep"/>
+                            <constraint firstAttribute="bottom" secondItem="ZM6-nc-sKy" secondAttribute="bottom" constant="66" id="unC-N3-azD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xxR-5Z-OHG"/>
@@ -333,12 +333,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Vz4-w9-aX3" secondAttribute="bottom" constant="182" id="4hD-b4-Eff"/>
                             <constraint firstItem="DTT-5P-bBv" firstAttribute="top" secondItem="U1p-lf-Yo6" secondAttribute="top" constant="56" id="FNY-88-ZLM"/>
                             <constraint firstItem="uIu-65-IGZ" firstAttribute="top" secondItem="U1p-lf-Yo6" secondAttribute="top" constant="214" id="KPv-NR-ffn"/>
+                            <constraint firstAttribute="bottom" secondItem="Vz4-w9-aX3" secondAttribute="bottom" constant="60" id="Rvs-JD-ziI"/>
                             <constraint firstItem="DTT-5P-bBv" firstAttribute="centerX" secondItem="U1p-lf-Yo6" secondAttribute="centerX" type="default" id="cay-4I-6ny"/>
                             <constraint firstItem="uIu-65-IGZ" firstAttribute="leading" secondItem="DTT-5P-bBv" secondAttribute="leading" type="default" id="gpK-ba-rOi"/>
-                            <constraint firstItem="Vz4-w9-aX3" firstAttribute="centerX" secondItem="DTT-5P-bBv" secondAttribute="centerX" type="default" id="vuR-rf-uqr"/>
+                            <constraint firstItem="uIu-65-IGZ" firstAttribute="centerX" secondItem="Vz4-w9-aX3" secondAttribute="centerX" type="default" id="tsQ-7r-FrP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SvT-1f-2He"/>
@@ -602,9 +602,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
