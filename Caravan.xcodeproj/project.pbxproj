@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD00A2CB165A196C004CDEFB /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD00A2CA165A196C004CDEFB /* MapController.m */; };
 		CD01C658163F17550097F925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C657163F17550097F925 /* UIKit.framework */; };
 		CD01C65A163F17550097F925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C659163F17550097F925 /* Foundation.framework */; };
 		CD01C65C163F17550097F925 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C65B163F17550097F925 /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD00A2C9165A196C004CDEFB /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
+		CD00A2CA165A196C004CDEFB /* MapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
 		CD01C653163F17550097F925 /* Caravan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caravan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD01C657163F17550097F925 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD01C659163F17550097F925 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -251,6 +254,8 @@
 			children = (
 				CD01C6A9163F38B40097F925 /* MapViewController.h */,
 				CD01C6AA163F38B40097F925 /* MapViewController.m */,
+				CD00A2C9165A196C004CDEFB /* MapController.h */,
+				CD00A2CA165A196C004CDEFB /* MapController.m */,
 			);
 			name = "V2: Map View";
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				CDF959F316488AEA00585EBC /* BasicInfoViewController.m in Sources */,
 				CDF959FA16488B4500585EBC /* AvatarSelectViewController.m in Sources */,
 				CDF959FE16488BA000585EBC /* PreferencesViewController.m in Sources */,
+				CD00A2CB165A196C004CDEFB /* MapController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
