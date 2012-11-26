@@ -457,7 +457,7 @@
             </objects>
             <point key="canvasLocation" x="2298" y="1823"/>
         </scene>
-        <!--Map View Controller - Item-->
+        <!--Map View Controller - Map View-->
         <scene sceneID="foS-U5-1wR">
             <objects>
                 <viewController id="GFL-z1-avY" customClass="MapViewController" sceneMemberID="viewController">
@@ -475,7 +475,7 @@
                             <constraint firstItem="Uey-Re-nlq" firstAttribute="top" secondItem="ERs-yg-v7X" secondAttribute="top" type="default" id="pAO-DO-oFb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="M67-bo-efO"/>
+                    <tabBarItem key="tabBarItem" title="Map View" id="M67-bo-efO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="Uey-Re-nlq" id="9qh-om-iE0"/>
