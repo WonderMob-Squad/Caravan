@@ -160,16 +160,8 @@
 				4E82DCB61667C81300C9BD6F /* Icon@2x.png */,
 				4E82DCB71667C81300C9BD6F /* iTunesArtwork */,
 				4E82DCB91667C81300C9BD6F /* winnebago.jpg */,
-				4E82DCBA1667C81300C9BD6F /* WonderMob */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		4E82DCBA1667C81300C9BD6F /* WonderMob */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WonderMob;
 			sourceTree = "<group>";
 		};
 		CD01C648163F17550097F925 = {
