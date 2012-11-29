@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface HostViewController : UIViewController
+@interface HostViewController : UIViewController <MFMailComposeViewControllerDelegate,
+MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate> {
+    IBOutlet UILabel *feedbackMsg;
+}
+- (IBAction)showMailPicker:(id)sender;
+- (IBAction)showSMSPicker:(id)sender;
+- (void)displayMailComposerSheet;
+- (void)displaySMSComposerSheet;
+@property (weak, nonatomic) IBOutlet UILabel *feedbackMsg;
 
 @end

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E82DC2616672EAB00C9BD6F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E82DC2516672EAB00C9BD6F /* MessageUI.framework */; };
+		4E82DC3B16672F5800C9BD6F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DC3116672F5800C9BD6F /* Icon-72.png */; };
+		4E82DC3C16672F5800C9BD6F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DC3216672F5800C9BD6F /* Icon-Small-50.png */; };
+		4E82DC3D16672F5800C9BD6F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DC3316672F5800C9BD6F /* Icon-Small.png */; };
+		4E82DC3E16672F5800C9BD6F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DC3416672F5800C9BD6F /* Icon-Small@2x.png */; };
+		4E82DC3F16672F5800C9BD6F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DC3516672F5800C9BD6F /* Icon.png */; };
+		4E82DC4016672F5800C9BD6F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DC3616672F5800C9BD6F /* Icon@2x.png */; };
+		4E82DC4116672F5800C9BD6F /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DC3716672F5800C9BD6F /* iTunesArtwork */; };
+		4E82DC4316672F5800C9BD6F /* winnebago.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DC3916672F5800C9BD6F /* winnebago.jpg */; };
 		CD01C658163F17550097F925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C657163F17550097F925 /* UIKit.framework */; };
 		CD01C65A163F17550097F925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C659163F17550097F925 /* Foundation.framework */; };
 		CD01C65C163F17550097F925 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C65B163F17550097F925 /* CoreGraphics.framework */; };
@@ -52,6 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E82DC2516672EAB00C9BD6F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4E82DC3116672F5800C9BD6F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		4E82DC3216672F5800C9BD6F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		4E82DC3316672F5800C9BD6F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		4E82DC3416672F5800C9BD6F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		4E82DC3516672F5800C9BD6F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		4E82DC3616672F5800C9BD6F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		4E82DC3716672F5800C9BD6F /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		4E82DC3916672F5800C9BD6F /* winnebago.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winnebago.jpg; sourceTree = "<group>"; };
 		CD01C653163F17550097F925 /* Caravan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caravan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD01C657163F17550097F925 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD01C659163F17550097F925 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E82DC2616672EAB00C9BD6F /* MessageUI.framework in Frameworks */,
 				CDF959EF164888F100585EBC /* Accounts.framework in Frameworks */,
 				CDF959EC164888BB00585EBC /* AddressBook.framework in Frameworks */,
 				CDF959E91648887D00585EBC /* CoreLocation.framework in Frameworks */,
@@ -130,6 +149,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E82DC2F16672F5800C9BD6F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4E82DC3116672F5800C9BD6F /* Icon-72.png */,
+				4E82DC3216672F5800C9BD6F /* Icon-Small-50.png */,
+				4E82DC3316672F5800C9BD6F /* Icon-Small.png */,
+				4E82DC3416672F5800C9BD6F /* Icon-Small@2x.png */,
+				4E82DC3516672F5800C9BD6F /* Icon.png */,
+				4E82DC3616672F5800C9BD6F /* Icon@2x.png */,
+				4E82DC3716672F5800C9BD6F /* iTunesArtwork */,
+				4E82DC3916672F5800C9BD6F /* winnebago.jpg */,
+			);
+			name = Images;
+			path = ../../../../CS4261/XCode/MessageComposer/Images;
+			sourceTree = "<group>";
+		};
 		CD01C648163F17550097F925 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +187,7 @@
 		CD01C656163F17550097F925 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E82DC2516672EAB00C9BD6F /* MessageUI.framework */,
 				CDF959ED164888DE00585EBC /* Accounts.framework */,
 				CDF959EA164888AF00585EBC /* AddressBook.framework */,
 				CDF959E71648886500585EBC /* CoreLocation.framework */,
@@ -188,6 +224,7 @@
 		CD01C65E163F17550097F925 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E82DC2F16672F5800C9BD6F /* Images */,
 				CD01C65F163F17550097F925 /* Caravan-Info.plist */,
 				CD01C660163F17550097F925 /* InfoPlist.strings */,
 				CD01C663163F17550097F925 /* main.m */,
@@ -406,6 +443,14 @@
 				CD01C67A163F17550097F925 /* MainStoryboard.storyboard in Resources */,
 				CD01C6A5163F37ED0097F925 /* Settings.bundle in Resources */,
 				CD01C6B7163F39F40097F925 /* MenuItems.plist in Resources */,
+				4E82DC3B16672F5800C9BD6F /* Icon-72.png in Resources */,
+				4E82DC3C16672F5800C9BD6F /* Icon-Small-50.png in Resources */,
+				4E82DC3D16672F5800C9BD6F /* Icon-Small.png in Resources */,
+				4E82DC3E16672F5800C9BD6F /* Icon-Small@2x.png in Resources */,
+				4E82DC3F16672F5800C9BD6F /* Icon.png in Resources */,
+				4E82DC4016672F5800C9BD6F /* Icon@2x.png in Resources */,
+				4E82DC4116672F5800C9BD6F /* iTunesArtwork in Resources */,
+				4E82DC4316672F5800C9BD6F /* winnebago.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
