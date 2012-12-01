@@ -14,9 +14,9 @@
 			<key>Email</key>
 			<string>jdoe@xyz.com</string>
 			<key>Lat</key>
-			<real>0</real>
+			<real>33.823546</real>
 			<key>Long</key>
-			<string>0.0</string>
+			<string>-84.352304</string>
 		</dict>
 		<dict>
 			<key>Last Name</key>
@@ -26,9 +26,9 @@
 			<key>Email</key>
 			<string>jdoe@xyz.com</string>
 			<key>Lat</key>
-			<real>0</real>
+			<real>33.83007</real>
 			<key>Long</key>
-			<string>0.0</string>
+			<string>-84.339601</string>
 		</dict>
 		<dict>
 			<key>Last Name</key>
@@ -38,9 +38,9 @@
 			<key>Email</key>
 			<string>jdoe@xyz.com</string>
 			<key>Lat</key>
-			<real>0</real>
+			<real>33.815773</real>
 			<key>Long</key>
-			<string>0.0</string>
+			<string>-84.36299</string>
 		</dict>
 		<dict>
 			<key>Last Name</key>
@@ -50,9 +50,9 @@
 			<key>Email</key>
 			<string>jdoe@xyz.com</string>
 			<key>Lat</key>
-			<real>0</real>
+			<real>33.822868</real>
 			<key>Long</key>
-			<string>0.0</string>
+			<string>-84.355137</string>
 		</dict>
 		<dict>
 			<key>Last Name</key>
@@ -62,9 +62,9 @@
 			<key>Email</key>
 			<string>jdoe@xyz.com</string>
 			<key>Lat</key>
-			<real>0</real>
+			<real>33.834704</real>
 			<key>Long</key>
-			<string>0.0</string>
+			<string>-84.329259</string>
 		</dict>
 		<dict>
 			<key>Last Name</key>
@@ -74,9 +74,9 @@
 			<key>Email</key>
 			<string>jdoe@xyz.com</string>
 			<key>Lat</key>
-			<real>0</real>
+			<real>33.840301</real>
 			<key>Long</key>
-			<string>0.0</string>
+			<string>-84.313037</string>
 		</dict>
 	</array>
 </dict>
