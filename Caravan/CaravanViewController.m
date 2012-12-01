@@ -43,7 +43,7 @@ NSUInteger numberOfPeople = 0;
     _caravanArray = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan"];
     caravanID = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan ID"];
     NSLog(@"%@", caravanID);
-    numberOfPeople = [[_caravanPeople allKeys] count];
+    numberOfPeople = [_caravanPeople count];
     NSLog(@"There are %i people in the caravan with ID \"%@\".", numberOfPeople, caravanID);
 
     // Uncomment the following line to preserve selection between presentations.
@@ -77,16 +77,24 @@ NSUInteger numberOfPeople = 0;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MenuCell";
+    static NSString *CellIdentifier = @"CaravanCell";
     CaravanCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSLog(@"%@", _caravanArray);
     
     // Configure the cell...
     NSDictionary *rowItem = [self.caravanArray objectAtIndex:[indexPath row]];
+    NSString *firstName = [rowItem valueForKey:@"First Name"];
+    NSString *lastName = [rowItem valueForKey:@"Last Name"];
+    //NSString *firstName = @"Test";
+    //NSString *lastName = @"Test";
     
-    cell.firstName.text = [rowItem valueForKey:@"First Name"];
-    cell.lastName.text = [rowItem valueForKey:@"Last Name"];
-    cell.emailAddress.text = [rowItem valueForKey:@"Email"];
-    NSLog(@"%@", cell.emailAddress);
+    
+    cell.textLabel.text = [[firstName stringByAppendingString:@" "] stringByAppendingString:lastName];
+    cell.detailTextLabel.text = [rowItem valueForKey:@"Email"];
+    //cell.lastName.text = [rowItem valueForKey:@"Last Name"];
+    //cell.emailAddress.text = [rowItem valueForKey:@"Email"];
+    NSLog(@"%@", cell.textLabel.text);
+    NSLog(@"%@", cell.detailTextLabel.text);
     //cell.firstName.text = [self.caravanArray objectAtIndex:[indexPath row]];
     //NSLog(@"%d", [indexPath row]);
     //NSLog(@"Cell text: %@", cell.menuText.text);

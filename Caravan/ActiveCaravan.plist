@@ -5,8 +5,7 @@
 	<key>Caravan ID</key>
 	<string>ctest1</string>
 	<key>Caravan</key>
-	<dict>
-		<key>Person - 3</key>
+	<array>
 		<dict>
 			<key>Last Name</key>
 			<string>Doe</string>
@@ -19,7 +18,6 @@
 			<key>Long</key>
 			<string>0.0</string>
 		</dict>
-		<key>Person - 2</key>
 		<dict>
 			<key>Last Name</key>
 			<string>Doe</string>
@@ -32,7 +30,6 @@
 			<key>Long</key>
 			<string>0.0</string>
 		</dict>
-		<key>Person - 5</key>
 		<dict>
 			<key>Last Name</key>
 			<string>Doe</string>
@@ -45,7 +42,6 @@
 			<key>Long</key>
 			<string>0.0</string>
 		</dict>
-		<key>Person - 6</key>
 		<dict>
 			<key>Last Name</key>
 			<string>Doe</string>
@@ -58,7 +54,6 @@
 			<key>Long</key>
 			<string>0.0</string>
 		</dict>
-		<key>Person - 7</key>
 		<dict>
 			<key>Last Name</key>
 			<string>Doe</string>
@@ -71,7 +66,6 @@
 			<key>Long</key>
 			<string>0.0</string>
 		</dict>
-		<key>Person - 1</key>
 		<dict>
 			<key>Last Name</key>
 			<string>Doe</string>
@@ -84,6 +78,6 @@
 			<key>Long</key>
 			<string>0.0</string>
 		</dict>
-	</dict>
+	</array>
 </dict>
 </plist>

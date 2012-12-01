@@ -9,9 +9,6 @@
 #import "CaravanCell.h"
 
 @implementation CaravanCell
-@synthesize firstName = _firstName;
-@synthesize lastName = _lastName;
-@synthesize emailAddress = _emailAddress;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
