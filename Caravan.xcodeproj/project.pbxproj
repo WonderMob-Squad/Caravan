@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356C66A1166A858B00E80E52 /* CaravanMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 356C669E166A858B00E80E52 /* CaravanMember.m */; };
+		356C66A2166A858B00E80E52 /* CaravanMemberDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356C66A0166A858B00E80E52 /* CaravanMemberDataController.m */; };
 		4E82DC2616672EAB00C9BD6F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E82DC2516672EAB00C9BD6F /* MessageUI.framework */; };
 		4E82DCBC1667C81300C9BD6F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DCB11667C81300C9BD6F /* Icon-72.png */; };
 		4E82DCBD1667C81300C9BD6F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DCB21667C81300C9BD6F /* Icon-Small-50.png */; };
@@ -63,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		356C669D166A858B00E80E52 /* CaravanMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaravanMember.h; sourceTree = "<group>"; };
+		356C669E166A858B00E80E52 /* CaravanMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaravanMember.m; sourceTree = "<group>"; };
+		356C669F166A858B00E80E52 /* CaravanMemberDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaravanMemberDataController.h; sourceTree = "<group>"; };
+		356C66A0166A858B00E80E52 /* CaravanMemberDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaravanMemberDataController.m; sourceTree = "<group>"; };
 		4E82DC2516672EAB00C9BD6F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4E82DCB11667C81300C9BD6F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		4E82DCB21667C81300C9BD6F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -321,6 +327,10 @@
 		CDF959DA1648877400585EBC /* V4: Host */ = {
 			isa = PBXGroup;
 			children = (
+				356C669D166A858B00E80E52 /* CaravanMember.h */,
+				356C669E166A858B00E80E52 /* CaravanMember.m */,
+				356C669F166A858B00E80E52 /* CaravanMemberDataController.h */,
+				356C66A0166A858B00E80E52 /* CaravanMemberDataController.m */,
 				CDF959DC1648878B00585EBC /* HostViewController.h */,
 				CDF959DD1648878B00585EBC /* HostViewController.m */,
 			);
@@ -507,6 +517,8 @@
 				CDF959FE16488BA000585EBC /* PreferencesViewController.m in Sources */,
 				CDB457371662F5D8002E6224 /* MapViewController.m in Sources */,
 				CD2C884B1669E2A500FA4C8E /* CaravanContactViewController.m in Sources */,
+				356C66A1166A858B00E80E52 /* CaravanMember.m in Sources */,
+				356C66A2166A858B00E80E52 /* CaravanMemberDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
