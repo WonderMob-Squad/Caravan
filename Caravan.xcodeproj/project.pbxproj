@@ -42,6 +42,7 @@
 		CD01C6B7163F39F40097F925 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD01C6B6163F39F40097F925 /* MenuItems.plist */; };
 		CD2C88471669C1D100FA4C8E /* ActiveCaravan.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2C88461669C1D100FA4C8E /* ActiveCaravan.plist */; };
 		CD2C884B1669E2A500FA4C8E /* CaravanContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2C884A1669E2A500FA4C8E /* CaravanContactViewController.m */; };
+		CD2C8855166AB90800FA4C8E /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2C8854166AB90800FA4C8E /* MapPin.m */; };
 		CDB457371662F5D8002E6224 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB457361662F5D8002E6224 /* MapViewController.m */; };
 		CDF959D116487F7E00585EBC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF959CE16487F7100585EBC /* MapKit.framework */; };
 		CDF959DE1648878B00585EBC /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF959DD1648878B00585EBC /* HostViewController.m */; };
@@ -113,6 +114,8 @@
 		CD2C88461669C1D100FA4C8E /* ActiveCaravan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ActiveCaravan.plist; sourceTree = "<group>"; };
 		CD2C88491669E2A500FA4C8E /* CaravanContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaravanContactViewController.h; sourceTree = "<group>"; };
 		CD2C884A1669E2A500FA4C8E /* CaravanContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaravanContactViewController.m; sourceTree = "<group>"; };
+		CD2C8853166AB90800FA4C8E /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
+		CD2C8854166AB90800FA4C8E /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
 		CDB457351662F5D8002E6224 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		CDB457361662F5D8002E6224 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		CDF959CE16487F7100585EBC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -302,6 +305,8 @@
 			children = (
 				CDB457351662F5D8002E6224 /* MapViewController.h */,
 				CDB457361662F5D8002E6224 /* MapViewController.m */,
+				CD2C8853166AB90800FA4C8E /* MapPin.h */,
+				CD2C8854166AB90800FA4C8E /* MapPin.m */,
 			);
 			name = "V2: Map View";
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				CD2C884B1669E2A500FA4C8E /* CaravanContactViewController.m in Sources */,
 				356C66A1166A858B00E80E52 /* CaravanMember.m in Sources */,
 				356C66A2166A858B00E80E52 /* CaravanMemberDataController.m in Sources */,
+				CD2C8855166AB90800FA4C8E /* MapPin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
