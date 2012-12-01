@@ -10,14 +10,14 @@
 
 @implementation CaravanMember
 
--(id)initWithName:(NSString *)fname lastname:(NSString *)lname mobilenumber:(NSString *)mobilenumber contactnumber:(NSString *)contactnumber;
+-(id)initWithName:(NSString *)fname lastname:(NSString *)lname mobilenumber:(NSString *)mobilenumber email:(NSString *)email;
 {
     self = [super init];
     if (self) {
         _firstname = fname;
         _lastname = lname;
         _mobilenumber = mobilenumber;
-        _contactnumber = contactnumber;
+        _email = email;
         return self;
     }
     return nil;

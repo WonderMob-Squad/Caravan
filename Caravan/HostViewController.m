@@ -7,6 +7,8 @@
 //
 
 #import "HostViewController.h"
+#import "CaravanMember.h"
+
 
 @interface HostViewController ()
 
@@ -14,6 +16,7 @@
 
 @implementation HostViewController
 //@synthesize feedbackMsg;
+@synthesize contacts;
 
 
 #pragma mark -
@@ -49,7 +52,33 @@
 	// earlier versions of the iPhone OS.
 	// We display an email composition interface if MFMailComposeViewController exists and the device
 	// can send emails.	Display feedback message, otherwise.
-	Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
+	
+    
+   // _cmdc = [[CaravanMemberDataController alloc] init];
+    contacts = [[NSMutableArray alloc] init];
+
+    //josh's code
+    
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = self;
+    // Display only a person's phone, email, and birthdate
+    NSArray *displayedItems = [NSArray arrayWithObjects:[NSNumber numberWithInt:kABPersonPhoneProperty],
+                               [NSNumber numberWithInt:kABPersonEmailProperty],
+                               [NSNumber numberWithInt:kABPersonBirthdayProperty], nil];
+    
+    
+    picker.displayedProperties = displayedItems;
+    // Show the picker
+    [self presentModalViewController:picker animated:YES];
+    
+    
+    
+    
+    
+    
+    
+    //orig code
+    Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
     
 	if (mailClass != nil) {
         //[self displayMailComposerSheet];
@@ -66,6 +95,74 @@
 		feedbackMsg.hidden = NO;
 		feedbackMsg.text = @"Device not configured to send mail.";
 	}
+}
+
+// Displays the information of a selected person
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+{
+    
+    CaravanMember *member = [[CaravanMember alloc]init];
+
+    NSString* firstName = (__bridge_transfer NSString*)ABRecordCopyValue(person,kABPersonFirstNameProperty);
+    NSString *lastName = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
+    //NSString *mobilePhone = ( __bridge_transfer NSString *)ABRecordCopyValue(person,kABPersonPhoneMobileLabel);
+    //NSString *emailAdd = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonEmailProperty);
+    
+    //get the mobile phone number
+    ABMultiValueRef phones = (ABMultiValueRef)ABRecordCopyValue(person, kABPersonPhoneProperty);
+    NSString* mobile=@"";
+    NSString* mobileLabel;
+    for (int i=0; i < ABMultiValueGetCount(phones); i++) {
+        //NSString *phone = (NSString *)ABMultiValueCopyValueAtIndex(phones, i);
+        //NSLog(@"%@", phone);
+        mobileLabel = (__bridge NSString*)ABMultiValueCopyLabelAtIndex(phones, i);
+        if([mobileLabel isEqualToString:(NSString *)kABPersonPhoneMobileLabel]) {
+            mobile = (__bridge NSString*)ABMultiValueCopyValueAtIndex(phones, i);
+            NSLog(@"mobile:");
+        }
+        else{
+            mobile = @"";
+        }
+        
+    }
+    //get the email addy
+    ABMultiValueRef emails = (ABMultiValueRef)ABRecordCopyValue(person, kABPersonEmailProperty);
+    NSString* emailAdd=@"";
+    if (ABMultiValueGetCount(emails)>=0){
+            emailAdd = (__bridge NSString*)ABMultiValueCopyValueAtIndex(emails, 0);
+            NSLog(@"email");
+    }
+        
+
+
+    [member initWithName:firstName lastname:lastName mobilenumber:mobile email:emailAdd];
+    
+    [contacts addObject:member];
+    //[_cmdc addCaravanMemberToCaravan:member];
+    NSLog(@"The value of count is %i", [contacts count]);
+    NSLog(firstName);
+    NSLog(lastName);
+    NSLog(mobile);
+    NSLog(emailAdd);
+
+    
+       
+    return NO;
+}
+
+
+// Does not allow users to perform default actions such as dialing a phone number, when they select a person property.
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    return NO;
+}
+
+
+// Dismisses the people picker and shows the application when users tap Cancel.
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 
