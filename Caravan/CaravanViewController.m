@@ -8,7 +8,7 @@
 
 #import "CaravanViewController.h"
 #import "CaravanCell.h"
-#import "CaravanContactViewController.h";
+#import "CaravanContactViewController.h"
 
 @interface CaravanViewController ()
 
