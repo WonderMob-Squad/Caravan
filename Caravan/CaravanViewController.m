@@ -8,6 +8,7 @@
 
 #import "CaravanViewController.h"
 #import "CaravanCell.h"
+#import "CaravanContactViewController.h";
 
 @interface CaravanViewController ()
 
@@ -17,12 +18,14 @@ NSString *caravanPath = nil;
 NSString *caravanValues = nil;
 NSString *caravanID = nil;
 NSUInteger numberOfPeople = 0;
+NSDictionary *contactInfo;
 
 @implementation CaravanViewController
 
 @synthesize caravan = _caravan;
 @synthesize caravanPeople = _caravanPeople;
 @synthesize caravanArray = _caravanArray;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -145,6 +148,9 @@ NSUInteger numberOfPeople = 0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    contactInfo = [_caravanArray objectAtIndex:[indexPath row]];
+    NSLog(@"Pushed row %i onto contactInfo variable.", [indexPath row]);
+    [self performSegueWithIdentifier:@"contactSegue" sender:self];
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -152,6 +158,11 @@ NSUInteger numberOfPeople = 0;
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
++ (NSDictionary*) ContactInfo
+{
+    return contactInfo;
 }
 
 @end
