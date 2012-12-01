@@ -15,6 +15,7 @@
 NSString *caravanPath = nil;
 NSString *caravanValues = nil;
 NSString *caravanID = nil;
+NSUInteger numberOfPeople = 0;
 
 @implementation CaravanViewController
 
@@ -39,6 +40,8 @@ NSString *caravanID = nil;
     _caravanPeople = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan"];
     caravanID = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan ID"];
     NSLog(@"%@", caravanID);
+    numberOfPeople = [[_caravanPeople allKeys] count];
+    NSLog(@"There are %i people in the caravan with ID \"%@\".", numberOfPeople, caravanID);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
