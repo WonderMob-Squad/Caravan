@@ -39,11 +39,18 @@ NSMutableArray * annotationList;
     
     caravanList = [CaravanViewController CaravanInfo];
     annotationList = [[NSMutableArray alloc] init];
+    NSLog(@"%i items in Caravan List", [caravanList count]);
     
     for(int i = 0; i < [caravanList count]; i++) {
         CLLocationCoordinate2D location;
-        location.latitude = (CLLocationDegrees)[[[caravanList objectAtIndex:i] objectForKey:@"Lat"]doubleValue];
-        location.longitude = (CLLocationDegrees)[[[caravanList objectAtIndex:i] objectForKey:@"Long"]doubleValue];
+        
+        double lat = [[[caravanList objectAtIndex:i] objectForKey:@"Lat"]doubleValue];
+        double longitude = [[[caravanList objectAtIndex:i] objectForKey:@"Long"]doubleValue];
+        NSLog(@"Latitude is %f", lat);
+        NSLog(@"Longitude is %f", longitude);
+        location.latitude = lat;
+        location.longitude = longitude;
+        NSLog(@"Location: %f, %f", location.latitude, location.longitude);
         
         MapPin* pin=[[MapPin alloc] init];
         
@@ -53,6 +60,7 @@ NSMutableArray * annotationList;
         
         [_mapView addAnnotation:(id)pin];
         [annotationList addObject:pin];
+        //NSLog(@"Pin dropped!");
         
     }
     
