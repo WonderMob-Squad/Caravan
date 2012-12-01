@@ -19,6 +19,11 @@
 @implementation CaravanContactViewController
 
 @synthesize contactInfo = _contactInfo;
+@synthesize firstName = _firstName;
+@synthesize lastName = _lastName;
+@synthesize emailAddress = _emailAddress;
+@synthesize lat = _lat;
+@synthesize longitude = _longitude;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +40,12 @@
 	// Do any additional setup after loading the view.
     _contactInfo = [CaravanViewController ContactInfo];
     NSLog(@"Contact Info received: %@", self.contactInfo);
+    _firstName.text = [_contactInfo valueForKey:@"First Name"];
+    _lastName.text = [_contactInfo valueForKey:@"Last Name"];
+    _emailAddress.text = [_contactInfo valueForKey:@"Email"];
+    _lat.text = [_contactInfo valueForKey:@"Lat"];
+    _longitude.text = [_contactInfo valueForKey:@"Long"];
+    
 }
 
 - (void)didReceiveMemoryWarning
