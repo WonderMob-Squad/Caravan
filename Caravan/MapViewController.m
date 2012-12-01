@@ -8,11 +8,13 @@
 
 #import "MapViewController.h"
 #import "MapPin.h"
+#import "CaravanViewController.h"
 
 @interface MapViewController ()
 
 @end
 
+NSArray * caravanList;
 
 @implementation MapViewController
 @synthesize mapView = _mapView;
@@ -33,6 +35,9 @@
 	// Do any additional setup after loading the view.
     _mapView.delegate = (id)self;
     NSLog(@"Delegate declared");
+    
+    caravanList = [CaravanViewController CaravanInfo];
+    
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
