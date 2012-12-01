@@ -10,4 +10,7 @@
 
 @interface CaravanViewController : UITableViewController
 
+@property (nonatomic, strong) NSDictionary *caravan;
+@property (nonatomic, strong) NSDictionary *caravanPeople;
+
 @end

@@ -12,7 +12,14 @@
 
 @end
 
+NSString *caravanPath = nil;
+NSString *caravanValues = nil;
+NSString *caravanID = nil;
+
 @implementation CaravanViewController
+
+@synthesize caravan = _caravan;
+@synthesize caravanPeople = _caravanPeople;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +33,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    caravanPath = [[NSBundle mainBundle] pathForResource:@"ActiveCaravan" ofType:@"plist"];
+    NSLog(@"%@", caravanPath);
+    _caravanPeople = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan"];
+    caravanID = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan ID"];
+    NSLog(@"%@", caravanID);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
