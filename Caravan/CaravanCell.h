@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CaravanCell : UITableViewCell
+@property (nonatomic, strong) IBOutlet UILabel *firstName;
+@property (nonatomic, strong) IBOutlet UILabel *lastName;
+@property (nonatomic, strong) IBOutlet UILabel *emailAddress;
 
 @end

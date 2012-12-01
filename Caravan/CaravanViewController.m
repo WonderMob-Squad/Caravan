@@ -7,6 +7,7 @@
 //
 
 #import "CaravanViewController.h"
+#import "CaravanCell.h"
 
 @interface CaravanViewController ()
 
@@ -21,6 +22,7 @@ NSUInteger numberOfPeople = 0;
 
 @synthesize caravan = _caravan;
 @synthesize caravanPeople = _caravanPeople;
+@synthesize caravanArray = _caravanArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,6 +40,7 @@ NSUInteger numberOfPeople = 0;
     caravanPath = [[NSBundle mainBundle] pathForResource:@"ActiveCaravan" ofType:@"plist"];
     NSLog(@"%@", caravanPath);
     _caravanPeople = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan"];
+    _caravanArray = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan"];
     caravanID = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan ID"];
     NSLog(@"%@", caravanID);
     numberOfPeople = [[_caravanPeople allKeys] count];
@@ -60,24 +63,33 @@ NSUInteger numberOfPeople = 0;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return numberOfPeople;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"MenuCell";
+    CaravanCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    NSDictionary *rowItem = [self.caravanArray objectAtIndex:[indexPath row]];
+    
+    cell.firstName.text = [rowItem valueForKey:@"First Name"];
+    cell.lastName.text = [rowItem valueForKey:@"Last Name"];
+    cell.emailAddress.text = [rowItem valueForKey:@"Email"];
+    NSLog(@"%@", cell.emailAddress);
+    //cell.firstName.text = [self.caravanArray objectAtIndex:[indexPath row]];
+    //NSLog(@"%d", [indexPath row]);
+    //NSLog(@"Cell text: %@", cell.menuText.text);
     
     return cell;
 }

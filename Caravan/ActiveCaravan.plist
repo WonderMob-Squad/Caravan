@@ -6,19 +6,6 @@
 	<string>ctest1</string>
 	<key>Caravan</key>
 	<dict>
-		<key>Person - 2</key>
-		<dict>
-			<key>Last Name</key>
-			<string>Doe</string>
-			<key>First Name</key>
-			<string>John</string>
-			<key>Email</key>
-			<string>jdoe@xyz.com</string>
-			<key>Lat</key>
-			<real>0</real>
-			<key>Long</key>
-			<string>0.0</string>
-		</dict>
 		<key>Person - 3</key>
 		<dict>
 			<key>Last Name</key>
@@ -32,7 +19,7 @@
 			<key>Long</key>
 			<string>0.0</string>
 		</dict>
-		<key>Person - 4</key>
+		<key>Person - 2</key>
 		<dict>
 			<key>Last Name</key>
 			<string>Doe</string>

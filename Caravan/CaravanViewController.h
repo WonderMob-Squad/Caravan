@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSDictionary *caravan;
 @property (nonatomic, strong) NSDictionary *caravanPeople;
+@property (nonatomic, strong) NSArray *caravanArray;
 
 @end
