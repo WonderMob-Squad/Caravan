@@ -9,6 +9,9 @@
 #import "MapPin.h"
 
 @implementation MapPin
+@synthesize location = _location;
+@synthesize title = _title;
+@synthesize subtitle = _subtitle;
 
 - (id)initWithFrame:(CGRect)frame
 {
