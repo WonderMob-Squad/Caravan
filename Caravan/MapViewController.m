@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "MapPin.h"
 
 @interface MapViewController ()
 
