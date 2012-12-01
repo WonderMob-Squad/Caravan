@@ -15,6 +15,7 @@
 @end
 
 NSArray * caravanList;
+NSMutableArray * annotationList;
 
 @implementation MapViewController
 @synthesize mapView = _mapView;
@@ -37,6 +38,23 @@ NSArray * caravanList;
     NSLog(@"Delegate declared");
     
     caravanList = [CaravanViewController CaravanInfo];
+    annotationList = [[NSMutableArray alloc] init];
+    
+    for(int i = 0; i < [caravanList count]; i++) {
+        CLLocationCoordinate2D location;
+        location.latitude = (CLLocationDegrees)[[[caravanList objectAtIndex:i] objectForKey:@"Lat"]doubleValue];
+        location.longitude = (CLLocationDegrees)[[[caravanList objectAtIndex:i] objectForKey:@"Long"]doubleValue];
+        
+        MapPin* pin=[[MapPin alloc] init];
+        
+        pin.location = location;
+        pin.title = [[caravanList objectAtIndex:i] objectForKey:@"First Name"];
+        pin.subtitle = [[caravanList objectAtIndex:i] objectForKey:@"Last Name"];
+        
+        [_mapView addAnnotation:(id)pin];
+        [annotationList addObject:pin];
+        
+    }
     
 }
 
