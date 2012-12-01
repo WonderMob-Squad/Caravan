@@ -71,10 +71,7 @@
     // Show the picker
     [self presentModalViewController:picker animated:YES];
     
-    
-    
-    
-    
+ 
     
     
     //orig code
@@ -144,10 +141,50 @@
     NSLog(lastName);
     NSLog(mobile);
     NSLog(emailAdd);
+    //[self sendCaravan];
 
     
        
     return NO;
+}
+
+-(void)sendCaravan
+{
+    NSString *url=@"http://mas.test.sagz.in/location.php?action=fetch&caravanid=1";
+    
+    NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    NSURLResponse *resp = nil;
+    NSError *err = nil;
+    
+    NSData *response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
+    
+    
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
+    
+    
+    if (!jsonArray) {
+        NSLog(@"Error parsing JSON: %@", err);
+    } else {
+        
+        /* not working currently below this line*/
+        NSLog(@"%d",[jsonArray count]);
+        NSDictionary *mainArray = [jsonArray objectAtIndex:0];
+       /* for (int i=0; i < [mainArray count]; i++) {
+            NSLog([mainArray objectAtIndex:i]);
+        }
+        */
+        //for(NSDictionary *item in jsonArray) {
+            //NSLog(@" %@", item);
+        NSObject *nmbr = [[NSObject alloc]init];
+        nmbr = [mainArray objectForKey:@"latitude"];
+            NSLog((NSString *)nmbr);
+            NSLog(@"---------------------------------");
+        //}
+         
+        
+    }
+    
 }
 
 
