@@ -13,8 +13,8 @@
 @property (nonatomic, copy) NSString *firstname;
 @property (nonatomic, copy) NSString *lastname;
 @property (nonatomic, copy) NSString *mobilenumber;
-@property (nonatomic, copy) NSString *contactnumber;
+@property (nonatomic, copy) NSString *email;
 
--(id)initWithName:(NSString *)fname lastname:(NSString *)lname mobilenumber:(NSString *)mobilenumber contactnumber:(NSString *)contactnumber;
+-(id)initWithName:(NSString *)fname lastname:(NSString *)lname mobilenumber:(NSString *)mobilenumber email:(NSString *)email;
 
 @end

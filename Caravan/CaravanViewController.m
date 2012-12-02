@@ -10,6 +10,7 @@
 #import "CaravanCell.h"
 #import "CaravanContactViewController.h"
 
+
 @interface CaravanViewController ()
 
 @end
@@ -19,6 +20,7 @@ NSString *caravanValues = nil;
 NSString *caravanID = nil;
 NSUInteger numberOfPeople = 0;
 NSDictionary *contactInfo;
+NSArray *caravanArrayToSend;
 
 @implementation CaravanViewController
 
@@ -44,6 +46,7 @@ NSDictionary *contactInfo;
     NSLog(@"%@", caravanPath);
     _caravanPeople = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan"];
     _caravanArray = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan"];
+    caravanArrayToSend = _caravanArray;
     caravanID = [[NSDictionary dictionaryWithContentsOfFile:caravanPath] valueForKey:@"Caravan ID"];
     NSLog(@"%@", caravanID);
     numberOfPeople = [_caravanPeople count];
@@ -163,6 +166,11 @@ NSDictionary *contactInfo;
 + (NSDictionary*) ContactInfo
 {
     return contactInfo;
+}
+
++(NSArray*) CaravanInfo
+{
+    return caravanArrayToSend;
 }
 
 @end

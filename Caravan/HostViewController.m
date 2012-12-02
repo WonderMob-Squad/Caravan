@@ -8,6 +8,7 @@
 
 #import "HostViewController.h"
 
+
 @interface HostViewController ()
 
 @end
@@ -49,7 +50,9 @@
 	// earlier versions of the iPhone OS.
 	// We display an email composition interface if MFMailComposeViewController exists and the device
 	// can send emails.	Display feedback message, otherwise.
-	Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
+	
+    
+    Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
     
 	if (mailClass != nil) {
         //[self displayMailComposerSheet];
@@ -66,6 +69,121 @@
 		feedbackMsg.hidden = NO;
 		feedbackMsg.text = @"Device not configured to send mail.";
 	}
+}
+
+//shows the contact picker if we want this flow to go first
+-(void)showContactPicker{
+    _caravan = [[Caravan alloc]init];
+    
+    // todo !!!add yourself to the caravan!!!!
+    
+    //josh's code
+    
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = self;
+    // Display only a person's phone, email, and birthdate
+    NSArray *displayedItems = [NSArray arrayWithObjects:[NSNumber numberWithInt:kABPersonPhoneProperty],
+                               [NSNumber numberWithInt:kABPersonEmailProperty],
+                               [NSNumber numberWithInt:kABPersonBirthdayProperty], nil];
+    
+    
+    picker.displayedProperties = displayedItems;
+    // Show the picker
+    [self presentModalViewController:picker animated:YES];
+    
+}
+
+// Displays the information of a selected person
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+{
+    
+    
+
+    NSString* firstName = (__bridge_transfer NSString*)ABRecordCopyValue(person,kABPersonFirstNameProperty);
+    NSString* lastName = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
+    //NSString *mobilePhone = ( __bridge_transfer NSString *)ABRecordCopyValue(person,kABPersonPhoneMobileLabel);
+    //NSString *emailAdd = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonEmailProperty);
+    
+    //get the mobile phone number
+    ABMultiValueRef phones = (ABMultiValueRef)ABRecordCopyValue(person, kABPersonPhoneProperty);
+    NSString* mobile=@"";
+    NSString* mobileLabel;
+    for (int i=0; i < ABMultiValueGetCount(phones); i++) {
+        //NSString *phone = (NSString *)ABMultiValueCopyValueAtIndex(phones, i);
+        //NSLog(@"%@", phone);
+        mobileLabel = (__bridge NSString*)ABMultiValueCopyLabelAtIndex(phones, i);
+        if([mobileLabel isEqualToString:(NSString *)kABPersonPhoneMobileLabel]) {
+            mobile = (__bridge NSString*)ABMultiValueCopyValueAtIndex(phones, i);
+            NSLog(@"mobile:");
+        }
+        else{
+            mobile = @"";
+        }
+        
+    }
+    //get the email addy
+    ABMultiValueRef emails = (ABMultiValueRef)ABRecordCopyValue(person, kABPersonEmailProperty);
+    NSString* emailAdd=@"";
+    if (ABMultiValueGetCount(emails)>=0){
+            emailAdd = (__bridge NSString*)ABMultiValueCopyValueAtIndex(emails, 0);
+            NSLog(@"email");
+    }
+        
+    CaravanMember *member = [[CaravanMember alloc]initWithName:firstName
+                                                      lastname:lastName
+                                                  mobilenumber:mobile
+                                                         email:emailAdd];
+    
+    [_caravan addMember:member];
+
+    NSLog(@"Who is in the caravan? %@", _caravan);
+    
+    // todo !!!!!move this to another button to start the caravan!!!!!
+    [self sendCaravan];
+
+    return NO;
+}
+
+-(void)sendCaravan
+{
+    NSString *url=@"http://mas.test.sagz.in/location.php?action=fetch&caravanid=1";
+    //NSString *url=@"http://api.kivaws.org/v1/loans/search.json?status=fundraising";
+    NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    NSURLResponse *resp = nil;
+    NSError *err = nil;
+    
+    NSData* response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
+    
+    
+    NSArray* jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
+    NSMutableArray* caravanMembers = [[NSMutableArray alloc] init];
+    
+    for( NSDictionary* jsonMember in jsonArray ) {
+        CaravanMember* member = [[CaravanMember alloc]
+                                 initWithName:[jsonMember objectForKey:@"firstname"]
+                                 lastname:[jsonMember objectForKey:@"lastname"]
+                                 mobilenumber:[jsonMember objectForKey:@"mobile"]
+                                 email:[jsonMember objectForKey:@"email"] ];
+        [caravanMembers addObject:member];
+    }
+    
+    NSLog(@"caravan members: %@", (NSArray*)caravanMembers);
+}
+
+
+// Does not allow users to perform default actions such as dialing a phone number, when they select a person property.
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    return NO;
+}
+
+
+// Dismisses the people picker and shows the application when users tap Cancel.
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -121,7 +239,7 @@
 	[picker addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"winnebago"];
 	
 	// Fill out the email body text
-	NSString *emailBody = @"Join me on our common destination by clicking the link below";
+	NSString *emailBody = @"Join me on our common destination by clicking this link: caravan://";
 	[picker setMessageBody:emailBody isHTML:NO];
 	
 	[self presentModalViewController:picker animated:YES];

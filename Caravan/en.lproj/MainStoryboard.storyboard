@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8yy-6Z-kvF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8yy-6Z-kvF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -183,30 +183,11 @@
                                     <segue destination="JVW-bZ-RiE" kind="push" id="OJW-RC-4lJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To start, tap a button below." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIi-SU-hBH">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="dWs-fb-hWn"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To start, tap the button below." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIi-SU-hBH">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKU-CV-2pp">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="U5g-og-zTu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Compose SMS">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showSMSPicker:" destination="nbj-W4-Pix" eventType="touchUpInside" id="51u-XI-G7X"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tk-W1-uzq">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="164" id="TJZ-1R-cDn"/>
@@ -222,13 +203,10 @@
                             <constraint firstItem="aIi-SU-hBH" firstAttribute="centerX" secondItem="HnO-xZ-1el" secondAttribute="centerX" type="default" id="EDH-IB-uJg"/>
                             <constraint firstItem="Sbu-SW-CzL" firstAttribute="top" secondItem="HnO-xZ-1el" secondAttribute="top" constant="59" id="JpI-zV-la4"/>
                             <constraint firstAttribute="bottom" secondItem="5tk-W1-uzq" secondAttribute="bottom" constant="170" id="Myq-2j-IMp"/>
-                            <constraint firstAttribute="bottom" secondItem="pKU-CV-2pp" secondAttribute="bottom" constant="70" id="Tg2-sg-Y3c"/>
                             <constraint firstItem="aIi-SU-hBH" firstAttribute="top" secondItem="HnO-xZ-1el" secondAttribute="top" constant="212" id="V0Y-VJ-qvK"/>
                             <constraint firstItem="5tk-W1-uzq" firstAttribute="leading" secondItem="HnO-xZ-1el" secondAttribute="leading" constant="75" id="Whc-z5-79o"/>
-                            <constraint firstItem="ZM6-nc-sKy" firstAttribute="leading" secondItem="HnO-xZ-1el" secondAttribute="leading" constant="32" id="f6h-Sh-Q0g"/>
                             <constraint firstItem="aIi-SU-hBH" firstAttribute="centerX" secondItem="Sbu-SW-CzL" secondAttribute="centerX" type="default" id="iWg-BR-MNY"/>
-                            <constraint firstAttribute="trailing" secondItem="pKU-CV-2pp" secondAttribute="trailing" constant="38" id="q2c-4H-LMO"/>
-                            <constraint firstItem="pKU-CV-2pp" firstAttribute="baseline" secondItem="ZM6-nc-sKy" secondAttribute="baseline" type="default" id="r5W-at-1tE"/>
+                            <constraint firstItem="ZM6-nc-sKy" firstAttribute="centerX" secondItem="5tk-W1-uzq" secondAttribute="centerX" type="default" id="o4O-Lc-8OK"/>
                             <constraint firstAttribute="bottom" secondItem="ZM6-nc-sKy" secondAttribute="bottom" constant="69" id="wnh-lo-uEM"/>
                         </constraints>
                     </view>
@@ -598,8 +576,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="GFL-z1-avY" kind="relationship" relationship="viewControllers" id="s9S-i4-bUa"/>
                         <segue destination="Zko-Xl-YwP" kind="relationship" relationship="viewControllers" id="b7n-ph-aMP"/>
+                        <segue destination="GFL-z1-avY" kind="relationship" relationship="viewControllers" id="RLU-OZ-dgN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NV-6r-0QX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -607,6 +585,80 @@
             <point key="canvasLocation" x="1764" y="58"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AvatarSelectViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AvatarSelectViewController.h"/>
+        </class>
+        <class className="BasicInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicInfoViewController.h"/>
+        </class>
+        <class className="CaravanCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CaravanCell.h"/>
+        </class>
+        <class className="CaravanContactViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CaravanContactViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="emailAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lastName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lat" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitude" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CaravanViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CaravanViewController.h"/>
+        </class>
+        <class className="CurrentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentViewController.h"/>
+        </class>
+        <class className="HostViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HostViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showMailPicker:"/>
+                <relationship kind="action" name="showSMSPicker:"/>
+                <relationship kind="outlet" name="feedbackMsg" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="JoinViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JoinViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="MenuCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="menuText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PreferencesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PreferencesViewController.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

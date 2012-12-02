@@ -16,6 +16,7 @@
 //@property (nonatomic, strong) NSDictionary *contactInfo;
 
 +(NSDictionary*) ContactInfo;
++(NSArray*) CaravanInfo;
 
 @end
 

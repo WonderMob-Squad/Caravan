@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
+#import "CaravanMemberDataController.h"
+#import "Caravan.h"
 
 @interface HostViewController : UIViewController <MFMailComposeViewControllerDelegate,
-MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate> {
+MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate, ABPeoplePickerNavigationControllerDelegate> {
     IBOutlet UILabel *feedbackMsg;
 }
 - (IBAction)showMailPicker:(id)sender;
@@ -19,5 +23,6 @@ MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate> {
 - (void)displayMailComposerSheet;
 - (void)displaySMSComposerSheet;
 @property (weak, nonatomic) IBOutlet UILabel *feedbackMsg;
-
+@property (nonatomic, copy) CaravanMemberDataController *cmdc;
+@property (nonatomic, copy) Caravan* caravan;
 @end
