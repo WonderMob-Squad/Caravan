@@ -141,7 +141,7 @@
     NSLog(lastName);
     NSLog(mobile);
     NSLog(emailAdd);
-    //[self sendCaravan];
+    [self sendCaravan];
 
     
        
@@ -151,39 +151,50 @@
 -(void)sendCaravan
 {
     NSString *url=@"http://mas.test.sagz.in/location.php?action=fetch&caravanid=1";
-    
+    //NSString *url=@"http://api.kivaws.org/v1/loans/search.json?status=fundraising";
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
     NSURLResponse *resp = nil;
     NSError *err = nil;
     
-    NSData *response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
+    NSData* response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
     
     
-    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
+    NSArray* jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
+    NSMutableArray* caravanMembers = [[NSMutableArray alloc] init];
     
+    for( NSDictionary* jsonMember in jsonArray ) {
+        CaravanMember* member = [[CaravanMember alloc]
+                                 initWithName:[jsonMember objectForKey:@"firstname"]
+                                 lastname:[jsonMember objectForKey:@"lastname"]
+                                 mobilenumber:[jsonMember objectForKey:@"mobile"]
+                                 email:[jsonMember objectForKey:@"email"] ];
+        [caravanMembers addObject:member];
+    }
     
+    NSLog(@"caravan members: %@", (NSArray*)caravanMembers);
+    /*
     if (!jsonArray) {
         NSLog(@"Error parsing JSON: %@", err);
     } else {
-        
+      */  
         /* not working currently below this line*/
-        NSLog(@"%d",[jsonArray count]);
-        NSDictionary *mainArray = [jsonArray objectAtIndex:0];
+        //NSLog(@"%d",[jsonArray count]);
+        //NSDictionary *mainArray = [jsonArray objectAtIndex:0];
        /* for (int i=0; i < [mainArray count]; i++) {
             NSLog([mainArray objectAtIndex:i]);
         }
         */
         //for(NSDictionary *item in jsonArray) {
             //NSLog(@" %@", item);
-        NSObject *nmbr = [[NSObject alloc]init];
-        nmbr = [mainArray objectForKey:@"latitude"];
-            NSLog((NSString *)nmbr);
-            NSLog(@"---------------------------------");
+        //NSObject *nmbr = [[NSObject alloc]init];
+        //nmbr = [mainArray objectForKey:@"latitude"];
+          //  NSLog((NSString *)nmbr);
+            //NSLog(@"---------------------------------");
         //}
          
         
-    }
+    //}
     
 }
 

@@ -23,4 +23,12 @@
     return nil;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Caravan Member(email: %@ firstName: %@ lastName: %@ mobileNumber: %@)",
+            _email,
+            _firstname,
+            _lastname,
+            _mobilenumber];
+}
+
 @end
