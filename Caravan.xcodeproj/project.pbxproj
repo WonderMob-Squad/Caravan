@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		356C66A1166A858B00E80E52 /* CaravanMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 356C669E166A858B00E80E52 /* CaravanMember.m */; };
 		356C66A2166A858B00E80E52 /* CaravanMemberDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356C66A0166A858B00E80E52 /* CaravanMemberDataController.m */; };
+		356C66A8166A8B8200E80E52 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356C66A7166A8B8200E80E52 /* AddressBookUI.framework */; };
 		4E82DC2616672EAB00C9BD6F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E82DC2516672EAB00C9BD6F /* MessageUI.framework */; };
 		4E82DCBC1667C81300C9BD6F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DCB11667C81300C9BD6F /* Icon-72.png */; };
 		4E82DCBD1667C81300C9BD6F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DCB21667C81300C9BD6F /* Icon-Small-50.png */; };
@@ -69,6 +70,7 @@
 		356C669E166A858B00E80E52 /* CaravanMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaravanMember.m; sourceTree = "<group>"; };
 		356C669F166A858B00E80E52 /* CaravanMemberDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaravanMemberDataController.h; sourceTree = "<group>"; };
 		356C66A0166A858B00E80E52 /* CaravanMemberDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaravanMemberDataController.m; sourceTree = "<group>"; };
+		356C66A7166A8B8200E80E52 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		4E82DC2516672EAB00C9BD6F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4E82DCB11667C81300C9BD6F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		4E82DCB21667C81300C9BD6F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356C66A8166A8B8200E80E52 /* AddressBookUI.framework in Frameworks */,
 				4E82DC2616672EAB00C9BD6F /* MessageUI.framework in Frameworks */,
 				CDF959EF164888F100585EBC /* Accounts.framework in Frameworks */,
 				CDF959EC164888BB00585EBC /* AddressBook.framework in Frameworks */,
@@ -197,6 +200,7 @@
 		CD01C656163F17550097F925 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				356C66A7166A8B8200E80E52 /* AddressBookUI.framework */,
 				4E82DC2516672EAB00C9BD6F /* MessageUI.framework */,
 				CDF959ED164888DE00585EBC /* Accounts.framework */,
 				CDF959EA164888AF00585EBC /* AddressBook.framework */,
