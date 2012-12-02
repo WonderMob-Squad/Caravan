@@ -52,26 +52,6 @@
 	// can send emails.	Display feedback message, otherwise.
 	
     
-   // _cmdc = [[CaravanMemberDataController alloc] init];
-    _caravan = [[Caravan alloc]init];
-    
-    // todo !!!add yourself to the caravan!!!!
-
-    //josh's code
-    
-    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
-    picker.peoplePickerDelegate = self;
-    // Display only a person's phone, email, and birthdate
-    NSArray *displayedItems = [NSArray arrayWithObjects:[NSNumber numberWithInt:kABPersonPhoneProperty],
-                               [NSNumber numberWithInt:kABPersonEmailProperty],
-                               [NSNumber numberWithInt:kABPersonBirthdayProperty], nil];
-    
-    
-    picker.displayedProperties = displayedItems;
-    // Show the picker
-    [self presentModalViewController:picker animated:YES];
-    
-    //orig code
     Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
     
 	if (mailClass != nil) {
@@ -89,6 +69,28 @@
 		feedbackMsg.hidden = NO;
 		feedbackMsg.text = @"Device not configured to send mail.";
 	}
+}
+
+//shows the contact picker if we want this flow to go first
+-(void)showContactPicker{
+    _caravan = [[Caravan alloc]init];
+    
+    // todo !!!add yourself to the caravan!!!!
+    
+    //josh's code
+    
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = self;
+    // Display only a person's phone, email, and birthdate
+    NSArray *displayedItems = [NSArray arrayWithObjects:[NSNumber numberWithInt:kABPersonPhoneProperty],
+                               [NSNumber numberWithInt:kABPersonEmailProperty],
+                               [NSNumber numberWithInt:kABPersonBirthdayProperty], nil];
+    
+    
+    picker.displayedProperties = displayedItems;
+    // Show the picker
+    [self presentModalViewController:picker animated:YES];
+    
 }
 
 // Displays the information of a selected person
@@ -237,7 +239,7 @@
 	[picker addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"winnebago"];
 	
 	// Fill out the email body text
-	NSString *emailBody = @"Join me on our common destination by clicking the link below";
+	NSString *emailBody = @"Join me on our common destination by clicking this link: caravan://";
 	[picker setMessageBody:emailBody isHTML:NO];
 	
 	[self presentModalViewController:picker animated:YES];
