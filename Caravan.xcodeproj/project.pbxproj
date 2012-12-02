@@ -19,6 +19,7 @@
 		4E82DCC21667C81300C9BD6F /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DCB71667C81300C9BD6F /* iTunesArtwork */; };
 		4E82DCC41667C81300C9BD6F /* winnebago.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E82DCB91667C81300C9BD6F /* winnebago.jpg */; };
 		4E82DCD6166A89A500C9BD6F /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E82DCD5166A89A500C9BD6F /* AddressBookUI.framework */; };
+		4E8947E0166AD6E4003134C6 /* Caravan.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8947DF166AD6E4003134C6 /* Caravan.m */; };
 		CD01C658163F17550097F925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C657163F17550097F925 /* UIKit.framework */; };
 		CD01C65A163F17550097F925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C659163F17550097F925 /* Foundation.framework */; };
 		CD01C65C163F17550097F925 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C65B163F17550097F925 /* CoreGraphics.framework */; };
@@ -81,6 +82,8 @@
 		4E82DCB71667C81300C9BD6F /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		4E82DCB91667C81300C9BD6F /* winnebago.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winnebago.jpg; sourceTree = "<group>"; };
 		4E82DCD5166A89A500C9BD6F /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		4E8947DE166AD6E4003134C6 /* Caravan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caravan.h; sourceTree = "<group>"; };
+		4E8947DF166AD6E4003134C6 /* Caravan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caravan.m; sourceTree = "<group>"; };
 		CD01C653163F17550097F925 /* Caravan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caravan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD01C657163F17550097F925 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD01C659163F17550097F925 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -342,6 +345,8 @@
 				356C66A0166A858B00E80E52 /* CaravanMemberDataController.m */,
 				CDF959DC1648878B00585EBC /* HostViewController.h */,
 				CDF959DD1648878B00585EBC /* HostViewController.m */,
+				4E8947DE166AD6E4003134C6 /* Caravan.h */,
+				4E8947DF166AD6E4003134C6 /* Caravan.m */,
 			);
 			name = "V4: Host";
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				356C66A1166A858B00E80E52 /* CaravanMember.m in Sources */,
 				356C66A2166A858B00E80E52 /* CaravanMemberDataController.m in Sources */,
 				CD2C8855166AB90800FA4C8E /* MapPin.m in Sources */,
+				4E8947E0166AD6E4003134C6 /* Caravan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

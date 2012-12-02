@@ -7,7 +7,6 @@
 //
 
 #import "HostViewController.h"
-#import "CaravanMember.h"
 
 
 @interface HostViewController ()
@@ -16,7 +15,6 @@
 
 @implementation HostViewController
 //@synthesize feedbackMsg;
-@synthesize contacts;
 
 
 #pragma mark -
@@ -55,7 +53,9 @@
 	
     
    // _cmdc = [[CaravanMemberDataController alloc] init];
-    contacts = [[NSMutableArray alloc] init];
+    _caravan = [[Caravan alloc]init];
+    
+    // todo !!!add yourself to the caravan!!!!
 
     //josh's code
     
@@ -70,9 +70,6 @@
     picker.displayedProperties = displayedItems;
     // Show the picker
     [self presentModalViewController:picker animated:YES];
-    
- 
-    
     
     //orig code
     Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
@@ -98,10 +95,10 @@
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
 {
     
-    CaravanMember *member = [[CaravanMember alloc]init];
+    
 
     NSString* firstName = (__bridge_transfer NSString*)ABRecordCopyValue(person,kABPersonFirstNameProperty);
-    NSString *lastName = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
+    NSString* lastName = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
     //NSString *mobilePhone = ( __bridge_transfer NSString *)ABRecordCopyValue(person,kABPersonPhoneMobileLabel);
     //NSString *emailAdd = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonEmailProperty);
     
@@ -130,21 +127,18 @@
             NSLog(@"email");
     }
         
-
-
-    [member initWithName:firstName lastname:lastName mobilenumber:mobile email:emailAdd];
+    CaravanMember *member = [[CaravanMember alloc]initWithName:firstName
+                                                      lastname:lastName
+                                                  mobilenumber:mobile
+                                                         email:emailAdd];
     
-    [contacts addObject:member];
-    //[_cmdc addCaravanMemberToCaravan:member];
-    NSLog(@"The value of count is %i", [contacts count]);
-    NSLog(firstName);
-    NSLog(lastName);
-    NSLog(mobile);
-    NSLog(emailAdd);
+    [_caravan addMember:member];
+
+    NSLog(@"Who is in the caravan? %@", _caravan);
+    
+    // todo !!!!!move this to another button to start the caravan!!!!!
     [self sendCaravan];
 
-    
-       
     return NO;
 }
 
@@ -173,29 +167,6 @@
     }
     
     NSLog(@"caravan members: %@", (NSArray*)caravanMembers);
-    /*
-    if (!jsonArray) {
-        NSLog(@"Error parsing JSON: %@", err);
-    } else {
-      */  
-        /* not working currently below this line*/
-        //NSLog(@"%d",[jsonArray count]);
-        //NSDictionary *mainArray = [jsonArray objectAtIndex:0];
-       /* for (int i=0; i < [mainArray count]; i++) {
-            NSLog([mainArray objectAtIndex:i]);
-        }
-        */
-        //for(NSDictionary *item in jsonArray) {
-            //NSLog(@" %@", item);
-        //NSObject *nmbr = [[NSObject alloc]init];
-        //nmbr = [mainArray objectForKey:@"latitude"];
-          //  NSLog((NSString *)nmbr);
-            //NSLog(@"---------------------------------");
-        //}
-         
-        
-    //}
-    
 }
 
 

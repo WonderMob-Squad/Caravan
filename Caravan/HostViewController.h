@@ -12,6 +12,7 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import "CaravanMemberDataController.h"
+#import "Caravan.h"
 
 @interface HostViewController : UIViewController <MFMailComposeViewControllerDelegate,
 MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate, ABPeoplePickerNavigationControllerDelegate> {
@@ -22,6 +23,6 @@ MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate, ABPeople
 - (void)displayMailComposerSheet;
 - (void)displaySMSComposerSheet;
 @property (weak, nonatomic) IBOutlet UILabel *feedbackMsg;
-@property (nonatomic, copy)  NSMutableArray *contacts;
-@property (nonatomic, copy)  CaravanMemberDataController *cmdc;
+@property (nonatomic, copy) CaravanMemberDataController *cmdc;
+@property (nonatomic, copy) Caravan* caravan;
 @end
