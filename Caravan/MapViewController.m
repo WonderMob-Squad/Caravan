@@ -113,7 +113,25 @@ NSMutableArray * annotationList;
         
     }
     NSLog(@"%@", annotationList);
-     [mapView addAnnotations:annotationList];
+    [mapView addAnnotations:annotationList];
+    
+    MapPin* current = [[MapPin alloc] init];
+    current.coordinate = userLocation.coordinate;
+    [annotationList addObject:current];
+    
+    MKMapRect flyTo = MKMapRectNull;
+	for (MapPin * pin in annotationList) {
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(pin.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+        if (MKMapRectIsNull(flyTo)) {
+            flyTo = pointRect;
+        } else {
+            flyTo = MKMapRectUnion(flyTo, pointRect);
+        }
+    }
+    
+    // Position the map so that all overlays and annotations are visible on screen.
+    mapView.visibleMapRect = flyTo;
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
