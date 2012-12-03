@@ -1,18 +1,14 @@
 //
-//  MapPin.m
+//  MapPinView.m
 //  Caravan
 //
-//  Created by Danny Cook on 12/1/12.
+//  Created by Danny Cook on 12/2/12.
 //  Copyright (c) 2012 Danny Cook. All rights reserved.
 //
 
-#import "MapPin.h"
+#import "MapPinView.h"
 
-@implementation MapPin
-@synthesize coordinate = _coordinate;
-@synthesize title = _title;
-@synthesize subtitle = _subtitle;
-
+@implementation MapPinView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -20,11 +16,6 @@
     if (self) {
         // Initialization code
     }
-    return self;
-}
-
-- (id)initWithCoordinates:(CLLocationCoordinate2D)location title:(NSString *)title subtitle:(NSString *)subtitle {
-    
     return self;
 }
 

@@ -65,7 +65,7 @@ NSString *menuItemValues = nil;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Update this section if number of menu items is changed.
-    return 6;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -136,13 +136,13 @@ NSString *menuItemValues = nil;
         case 2: //Join a Caravan
             [self performSegueWithIdentifier:@"joinSegue" sender:self];
             break;
-        case 3: //Edit Your Profile
-            [self performSegueWithIdentifier:@"profileSegue" sender:self];
-            break;
-        case 4: //View Caravan In Progress
-            [self performSegueWithIdentifier:@"currentSegue" sender:self];
-            break;
-        case 5: //Abandon Caravan
+        //case 3: //Edit Your Profile
+          //  [self performSegueWithIdentifier:@"profileSegue" sender:self];
+            //break;
+        //case 4: //View Caravan In Progress
+          //  [self performSegueWithIdentifier:@"currentSegue" sender:self];
+            //break;
+        case 3: //Abandon Caravan
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Really Abandon?"
                                                        message:@"If you abandon your caravan, you will be unable to exchange location information with your fellow travelers."

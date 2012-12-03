@@ -10,7 +10,7 @@
 			<key>Last Name</key>
 			<string>Doe</string>
 			<key>First Name</key>
-			<string>A</string>
+			<string>John</string>
 			<key>Email</key>
 			<string>jdoe@xyz.com</string>
 			<key>Lat</key>
@@ -22,9 +22,9 @@
 			<key>Last Name</key>
 			<string>Doe</string>
 			<key>First Name</key>
-			<string>B</string>
+			<string>Jane</string>
 			<key>Email</key>
-			<string>jdoe@xyz.com</string>
+			<string>jane@xyz.com</string>
 			<key>Lat</key>
 			<real>33.83007</real>
 			<key>Long</key>
@@ -34,9 +34,9 @@
 			<key>Last Name</key>
 			<string>Doe</string>
 			<key>First Name</key>
-			<string>C</string>
+			<string>Jim</string>
 			<key>Email</key>
-			<string>jdoe@xyz.com</string>
+			<string>jimbo@xyz.com</string>
 			<key>Lat</key>
 			<real>33.815773</real>
 			<key>Long</key>
@@ -46,9 +46,9 @@
 			<key>Last Name</key>
 			<string>Doe</string>
 			<key>First Name</key>
-			<string>D</string>
+			<string>Jenkins</string>
 			<key>Email</key>
-			<string>jdoe@xyz.com</string>
+			<string>ponies@xyz.com</string>
 			<key>Lat</key>
 			<real>33.822868</real>
 			<key>Long</key>
@@ -58,9 +58,9 @@
 			<key>Last Name</key>
 			<string>Doe</string>
 			<key>First Name</key>
-			<string>E</string>
+			<string>Jill</string>
 			<key>Email</key>
-			<string>jdoe@xyz.com</string>
+			<string>jill@xyz.com</string>
 			<key>Lat</key>
 			<real>33.834704</real>
 			<key>Long</key>
@@ -70,9 +70,9 @@
 			<key>Last Name</key>
 			<string>Doe</string>
 			<key>First Name</key>
-			<string>F</string>
+			<string>Bobby</string>
 			<key>Email</key>
-			<string>jdoe@xyz.com</string>
+			<string>bdoe@xyz.com</string>
 			<key>Lat</key>
 			<real>33.840301</real>
 			<key>Long</key>
