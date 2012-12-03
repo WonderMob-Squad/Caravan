@@ -428,9 +428,9 @@
                             <constraint firstItem="DTT-5P-bBv" firstAttribute="top" secondItem="U1p-lf-Yo6" secondAttribute="top" constant="56" id="FNY-88-ZLM"/>
                             <constraint firstItem="uIu-65-IGZ" firstAttribute="trailing" secondItem="DTT-5P-bBv" secondAttribute="trailing" type="default" id="QOw-Xi-U0Z"/>
                             <constraint firstAttribute="bottom" secondItem="Vz4-w9-aX3" secondAttribute="bottom" constant="66" id="Wo2-BT-1Zk"/>
+                            <constraint firstItem="uIu-65-IGZ" firstAttribute="top" secondItem="U1p-lf-Yo6" secondAttribute="top" constant="141" id="oB3-jB-2kK"/>
                             <constraint firstItem="qRp-qK-cAL" firstAttribute="centerX" secondItem="U1p-lf-Yo6" secondAttribute="centerX" type="default" id="sQv-rO-eVI"/>
                             <constraint firstItem="qRp-qK-cAL" firstAttribute="centerX" secondItem="DTT-5P-bBv" secondAttribute="centerX" type="default" id="y7y-8O-kp9"/>
-                            <constraint firstItem="uIu-65-IGZ" firstAttribute="top" secondItem="U1p-lf-Yo6" secondAttribute="top" constant="202" id="ze1-1B-WQ9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SvT-1f-2He"/>
