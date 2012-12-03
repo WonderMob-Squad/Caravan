@@ -10,13 +10,15 @@
 
 @interface MapPin : MKAnnotationView
 {
-    CLLocationCoordinate2D location;
+    CLLocationCoordinate2D coordinate;
     NSString* title;
     NSString* subtitle;
     
 }
-@property (nonatomic, assign) CLLocationCoordinate2D location;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString* title;
 @property (nonatomic, copy) NSString* subtitle;
+
+- (id)initWithCoordinates:(CLLocationCoordinate2D)location title:(NSString *)title subtitle:(NSString *)subtitle;
 
 @end

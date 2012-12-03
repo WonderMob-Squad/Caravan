@@ -112,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Caravan/MapViewController.m"
-         timestampString = "376095855.280791"
+         timestampString = "376191626.165285"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "61"
-         endingLineNumber = "61"
+         startingLineNumber = "62"
+         endingLineNumber = "62"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>

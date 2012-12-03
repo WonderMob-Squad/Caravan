@@ -19,6 +19,7 @@ NSMutableArray * annotationList;
 
 @implementation MapViewController
 @synthesize mapView = _mapView;
+@synthesize locationManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +37,7 @@ NSMutableArray * annotationList;
 	// Do any additional setup after loading the view.
     _mapView.delegate = (id)self;
     NSLog(@"Delegate declared");
-    
+  /*
     caravanList = [CaravanViewController CaravanInfo];
     annotationList = [[NSMutableArray alloc] init];
     NSLog(@"%i items in Caravan List", [caravanList count]);
@@ -46,8 +47,8 @@ NSMutableArray * annotationList;
         
         double lat = [[[caravanList objectAtIndex:i] objectForKey:@"Lat"]doubleValue];
         double longitude = [[[caravanList objectAtIndex:i] objectForKey:@"Long"]doubleValue];
-        NSLog(@"Latitude is %f", lat);
-        NSLog(@"Longitude is %f", longitude);
+        //NSLog(@"Latitude is %f", lat);
+        //NSLog(@"Longitude is %f", longitude);
         location.latitude = lat;
         location.longitude = longitude;
         NSLog(@"Location: %f, %f", location.latitude, location.longitude);
@@ -63,7 +64,13 @@ NSMutableArray * annotationList;
         //NSLog(@"Pin dropped!");
         
     }
+    */
     
+    [self setLocationManager:[[CLLocationManager alloc] init]];
+    [locationManager setDelegate:self];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
+    [locationManager startUpdatingLocation];
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -75,6 +82,59 @@ NSMutableArray * annotationList;
     
     [mapView setRegion:mapRegion animated: YES];
     NSLog(@"User location updated. Region set.");
+    
+    caravanList = [CaravanViewController CaravanInfo];
+    annotationList = [[NSMutableArray alloc] init];
+    NSLog(@"%i items in Caravan List", [caravanList count]);
+    
+    for(int i = 0; i < [caravanList count]; i++) {
+        CLLocationCoordinate2D location;
+        MapPin* pin = [[MapPin alloc] init];
+        double lat = [[[caravanList objectAtIndex:i] objectForKey:@"Lat"]doubleValue];
+        double longitude = [[[caravanList objectAtIndex:i] objectForKey:@"Long"]doubleValue];
+        //NSLog(@"Latitude is %f", lat);
+        //NSLog(@"Longitude is %f", longitude);
+        pin.coordinate = CLLocationCoordinate2DMake(lat, longitude);
+        pin.title = [[caravanList objectAtIndex:i] objectForKey:@"First Name"];
+        pin.subtitle = [[caravanList objectAtIndex:i] objectForKey:@"Last Name"];
+        location.latitude = lat;
+        location.longitude = longitude;
+        NSLog(@"Location: %f, %f", location.latitude, location.longitude);
+        
+        //MapPin* pin=[[MapPin alloc] initWithCoordinates:location title:[[caravanList objectAtIndex:i] objectForKey:@"First Name"] subtitle:[[caravanList objectAtIndex:i] objectForKey:@"Last Name"]];
+        
+        //pin.location = location;
+        //pin.title = [[caravanList objectAtIndex:i] objectForKey:@"First Name"];
+        //pin.subtitle = [[caravanList objectAtIndex:i] objectForKey:@"Last Name"];
+        
+       
+        [annotationList addObject:pin];
+        //NSLog(@"Pin dropped!");
+        
+    }
+    NSLog(@"%@", annotationList);
+     [mapView addAnnotations:annotationList];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    
+    static NSString *identifier = @"MyLocation";
+    if ([annotation isKindOfClass:[MapPin class]]) {
+        
+        MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        if (annotationView == nil) {
+            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        } else {
+            annotationView.annotation = annotation;
+        }
+        
+        annotationView.enabled = YES;
+        annotationView.canShowCallout = YES;
+        
+        return annotationView;
+    }
+    
+    return nil; 
 }
 
 - (void)didReceiveMemoryWarning
