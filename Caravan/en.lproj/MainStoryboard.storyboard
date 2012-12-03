@@ -391,7 +391,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To start, tap the button below." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIu-65-IGZ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To start, input your Caravan ID below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="uIu-65-IGZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="aI4-HZ-QV8"/>
+                                    <constraint firstAttribute="width" constant="205" id="yMB-9D-gVP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -409,15 +413,24 @@
                                     <segue destination="R8f-sO-o6S" kind="push" id="auH-a9-UC4"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caravan ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-qK-cAL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="lUo-js-yoZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qRp-qK-cAL" firstAttribute="centerX" secondItem="Vz4-w9-aX3" secondAttribute="centerX" type="default" id="4Is-RH-13P"/>
+                            <constraint firstAttribute="bottom" secondItem="qRp-qK-cAL" secondAttribute="bottom" constant="158" id="Baq-Pf-TvL"/>
                             <constraint firstItem="DTT-5P-bBv" firstAttribute="top" secondItem="U1p-lf-Yo6" secondAttribute="top" constant="56" id="FNY-88-ZLM"/>
-                            <constraint firstItem="uIu-65-IGZ" firstAttribute="top" secondItem="U1p-lf-Yo6" secondAttribute="top" constant="214" id="KPv-NR-ffn"/>
-                            <constraint firstAttribute="bottom" secondItem="Vz4-w9-aX3" secondAttribute="bottom" constant="60" id="Rvs-JD-ziI"/>
-                            <constraint firstItem="DTT-5P-bBv" firstAttribute="centerX" secondItem="U1p-lf-Yo6" secondAttribute="centerX" type="default" id="cay-4I-6ny"/>
-                            <constraint firstItem="uIu-65-IGZ" firstAttribute="leading" secondItem="DTT-5P-bBv" secondAttribute="leading" type="default" id="gpK-ba-rOi"/>
-                            <constraint firstItem="uIu-65-IGZ" firstAttribute="centerX" secondItem="Vz4-w9-aX3" secondAttribute="centerX" type="default" id="tsQ-7r-FrP"/>
+                            <constraint firstItem="uIu-65-IGZ" firstAttribute="trailing" secondItem="DTT-5P-bBv" secondAttribute="trailing" type="default" id="QOw-Xi-U0Z"/>
+                            <constraint firstAttribute="bottom" secondItem="Vz4-w9-aX3" secondAttribute="bottom" constant="66" id="Wo2-BT-1Zk"/>
+                            <constraint firstItem="qRp-qK-cAL" firstAttribute="centerX" secondItem="U1p-lf-Yo6" secondAttribute="centerX" type="default" id="sQv-rO-eVI"/>
+                            <constraint firstItem="qRp-qK-cAL" firstAttribute="centerX" secondItem="DTT-5P-bBv" secondAttribute="centerX" type="default" id="y7y-8O-kp9"/>
+                            <constraint firstItem="uIu-65-IGZ" firstAttribute="top" secondItem="U1p-lf-Yo6" secondAttribute="top" constant="202" id="ze1-1B-WQ9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SvT-1f-2He"/>
