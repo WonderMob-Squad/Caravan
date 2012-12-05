@@ -20,9 +20,12 @@ MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate, ABPeople
 }
 - (IBAction)showMailPicker:(id)sender;
 - (IBAction)showSMSPicker:(id)sender;
+- (IBAction)showPeoplePicker:(id)sender;
+
 - (void)displayMailComposerSheet;
 - (void)displaySMSComposerSheet;
+
 @property (weak, nonatomic) IBOutlet UILabel *feedbackMsg;
-@property (nonatomic, copy) CaravanMemberDataController *cmdc;
 @property (nonatomic, copy) Caravan* caravan;
+
 @end

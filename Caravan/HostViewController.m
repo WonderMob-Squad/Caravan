@@ -41,6 +41,7 @@
 }
 
 
+
 #pragma mark -
 #pragma mark Show Mail/SMS picker
 
@@ -52,13 +53,17 @@
 	// can send emails.	Display feedback message, otherwise.
 	
     
+    
     Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
     
 	if (mailClass != nil) {
         //[self displayMailComposerSheet];
 		// We must always check whether the current device is configured for sending emails
 		if ([mailClass canSendMail]) {
-			[self displayMailComposerSheet];
+			// todo !!!!!move this to another button to start the caravan!!!!!
+            //[self sendCaravan];
+            
+            [self displayMailComposerSheet];
 		}
 		else {
 			feedbackMsg.hidden = NO;
@@ -71,9 +76,15 @@
 	}
 }
 
+- (IBAction)showPeoplePicker:(id)sender{
+    _caravan = [[Caravan alloc]init];
+    [self showContactPicker];
+}
+
+
 //shows the contact picker if we want this flow to go first
 -(void)showContactPicker{
-    _caravan = [[Caravan alloc]init];
+    
     
     // todo !!!add yourself to the caravan!!!!
     
@@ -137,9 +148,7 @@
     [_caravan addMember:member];
 
     NSLog(@"Who is in the caravan? %@", _caravan);
-    
-    // todo !!!!!move this to another button to start the caravan!!!!!
-    [self sendCaravan];
+    NSLog(@"caravan size %i", [_caravan getCaravanSize]);
 
     return NO;
 }
@@ -147,7 +156,7 @@
 -(void)sendCaravan
 {
     NSString *url=@"http://mas.test.sagz.in/location.php?action=fetch&caravanid=1";
-    //NSString *url=@"http://api.kivaws.org/v1/loans/search.json?status=fundraising";
+    
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
     NSURLResponse *resp = nil;
@@ -158,6 +167,8 @@
     
     NSArray* jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
     NSMutableArray* caravanMembers = [[NSMutableArray alloc] init];
+    
+    //assign this array to property
     
     for( NSDictionary* jsonMember in jsonArray ) {
         CaravanMember* member = [[CaravanMember alloc]
@@ -218,20 +229,35 @@
 // Displays an email composition interface inside the application. Populates all the Mail fields.
 -(void)displayMailComposerSheet
 {
-	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
 	picker.mailComposeDelegate = self;
 	
 	[picker setSubject:@"Join My Caravan"];
 	
+    
 	
 	// Set up recipients
-	NSArray *toRecipients = [NSArray arrayWithObject:@"first@myentourage.com"];
-	NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@myentrourage.com", @"third@myentourage.com", nil];
-	NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@myentourage.com"];
+    NSArray *tempRecipients = [NSArray arrayWithArray:[_caravan members]];
+    
+     
+    NSMutableArray *toRecipients = [[NSMutableArray alloc]init];
+    NSString *emailstr = [[NSString alloc]init];
+    CaravanMember *cm = [[CaravanMember alloc]init];
+
+    for (int i =0; i < [tempRecipients count]; i++){
+        cm = [tempRecipients objectAtIndex:i];
+        emailstr = [cm email];
+        [toRecipients addObject:emailstr];
+        NSLog(@"item added %@", (NSArray*)toRecipients);
+    }
+    
+    //NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@myentrourage.com", @"third@myentourage.com", nil];
+	//NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@myentourage.com"];
 	
 	[picker setToRecipients:toRecipients];
-	[picker setCcRecipients:ccRecipients];
-	[picker setBccRecipients:bccRecipients];
+	//[picker setCcRecipients:ccRecipients];
+	//[picker setBccRecipients:bccRecipients];
 	
 	// Attach an image to the email
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"winnebago" ofType:@"jpg"];

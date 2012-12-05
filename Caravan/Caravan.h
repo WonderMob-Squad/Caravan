@@ -18,4 +18,6 @@
 
 -(void)addMember:(CaravanMember*) member;
 
+-(int)getCaravanSize;
+
 @end

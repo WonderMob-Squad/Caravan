@@ -30,4 +30,8 @@
             _caravanId,
             _members];
 }
+
+-(int)getCaravanSize{
+    return [_members count];
+}
 @end
